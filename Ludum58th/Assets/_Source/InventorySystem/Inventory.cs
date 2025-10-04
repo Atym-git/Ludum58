@@ -1,24 +1,22 @@
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.InputSystem.Processors;
-using UnityEngine.UI;
 
 public class Inventory
 {
     private static List<Item> _items = new();
 
-    private static InventoryVisualizer _inventoryVisualizer;
+    private static Invoker _invoker;
 
-    public Inventory(InventoryVisualizer inventoryVisualizer)
+    public Inventory(Invoker invoker)
     {
-        _inventoryVisualizer = inventoryVisualizer;
+        _invoker = invoker;
     }
 
     public static void AddItem(Item item)
     {
         _items.Add(item);
-        int lastIndex = _items.Count - 1;
-        _inventoryVisualizer.ShowInventoryItems(item.ItemSprite, lastIndex);
+        int itemIndex = _items.Count - 1;
+        _invoker.InvokeShowInv(item, itemIndex);
     }
 
     public void RemoveAtItem(int index)
