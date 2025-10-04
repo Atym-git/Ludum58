@@ -22,7 +22,7 @@ public class InputListener : MonoBehaviour
         Bind();
     }
 
-    private void Update()
+    private void FixedUpdate()
     {
         Movement();
     }
