@@ -22,6 +22,6 @@ public class Invoker
 
     public void InvokeCursorTrack()
     {
-        _cursorTrack.TrackOnClick(Camera.main, _itemLayerMask);
+        _cursorTrack.TrackOnClick(Camera.main/*, _itemLayerMask*/);
     }
 }
