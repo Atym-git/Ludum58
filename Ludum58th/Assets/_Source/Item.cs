@@ -5,6 +5,9 @@ public class Item : MonoBehaviour
 {
     [field:SerializeField]
     public Sprite ItemSprite {  get; private set; }
+    
+    [field:SerializeField]
+    public string ItemNotifText {  get; private set; }
 
     private void OnMouseDown()
     {
@@ -19,6 +22,7 @@ public class Item : MonoBehaviour
     private void OnClick()
     {
         Inventory.AddItem(gameObject.GetComponent<Item>());
-        Destroy(gameObject);
     }
+
+    public void SelfDestruct() => Destroy(gameObject);
 }
