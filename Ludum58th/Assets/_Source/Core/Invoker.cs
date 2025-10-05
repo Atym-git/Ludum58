@@ -3,18 +3,24 @@ using UnityEngine;
 public class Invoker
 {
     private PlayerMovement _playerMovement;
-    private PlayerData _playerData;
+    private static PlayerData _playerData;
     private CursorTrack _cursorTrack;
     private InventoryVisualizer _inventoryVisualizer;
+    private static Transition _transition;
 
     //private LayerMask _itemLayerMask;
 
-    public Invoker(PlayerMovement playerMovement, PlayerData playerData, CursorTrack cursorTrack, InventoryVisualizer inventoryVisualizer)
+    public Invoker(PlayerMovement playerMovement,
+                   PlayerData playerData,
+                   CursorTrack cursorTrack,
+                   InventoryVisualizer inventoryVisualizer,
+                   Transition transition)
     {
         _playerMovement = playerMovement;
         _playerData = playerData;
         _cursorTrack = cursorTrack;
         _inventoryVisualizer = inventoryVisualizer;
+        _transition = transition;
     }
 
     public void InvokeMove(float vertMoveF)
@@ -35,5 +41,10 @@ public class Invoker
                                        itemIndex,
                                        _playerData.InventoryNotifTMP,
                                        _playerData.NotificationDuration);
+    }
+
+    public static void InvokeTeleportTo(Transform teleportToTransform)
+    {
+        _transition.TeleportTo(_playerData.transform, teleportToTransform, _playerData.BlackScreen);
     }
 }
