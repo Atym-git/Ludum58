@@ -46,7 +46,7 @@ public class Invoker
     public void InvokeItemsSpawn()
     {
         ItemSO[] itemSOs = _resourceLoader.LoadItemsSO();
-        _itemFabric.InstantiateItems(itemSOs);
+        _itemFabric.InstantiateItems( itemSOs);
     }
 
     public void InvokeShowInv(Item item, int itemIndex)

@@ -9,6 +9,10 @@ public class DragAndDrop : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndD
 
     [HideInInspector] public Transform ParentAfterDrag;
 
+    [SerializeField] private RectTransform canvasRT;
+
+    [SerializeField] private Canvas canvas;
+
     private void Start()
     {
         _image = GetComponent<Image>();
@@ -18,16 +22,14 @@ public class DragAndDrop : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndD
     public void OnBeginDrag(PointerEventData eventData)
     {
         ParentAfterDrag = transform.parent;
-        transform.SetParent(transform.root);
-        transform.SetAsLastSibling();
+        transform.SetParent(canvasRT);
         _image.raycastTarget = false;
         
     }
 
     public void OnDrag(PointerEventData eventData)
     {
-        transform.position = Input.mousePosition;
-        //_rectTransform.anchoredPosition += eventData.delta;
+        _rectTransform.anchoredPosition += eventData.delta / canvas.scaleFactor;
     }
 
     public void OnEndDrag(PointerEventData eventData)

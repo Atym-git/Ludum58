@@ -1,17 +1,32 @@
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-public class Slot : MonoBehaviour, IDropHandler
+public class Slot : MonoBehaviour/*, IDropHandler*/
 {
-    public void OnDrop(PointerEventData eventData)
+    //public void OnDrop(PointerEventData eventData)
+    //{
+    //    if (eventData.pointerDrag != null)
+    //    {
+    //        //eventData.pointerDrag.GetComponent<RectTransform>().anchoredPosition =
+    //        //    GetComponent<RectTransform>().anchoredPosition;
+    //        GameObject dropped = eventData.pointerDrag;
+    //        DragAndDrop drag = dropped.GetComponent<DragAndDrop>();
+    //        drag.ParentAfterDrag = transform;
+    //    }
+    //}
+
+    private bool _isDragging;
+
+    public void Construct(DraggableContainer container)
     {
-        if (eventData.pointerDrag != null)
+        _isDragging = container.DraggableItem != null;
+    }
+
+    private void OnMouseEnter()
+    {
+        if (_isDragging)
         {
-            //eventData.pointerDrag.GetComponent<RectTransform>().anchoredPosition =
-            //    GetComponent<RectTransform>().anchoredPosition;
-            GameObject dropped = eventData.pointerDrag;
-            DragAndDrop drag = dropped.GetComponent<DragAndDrop>();
-            drag.ParentAfterDrag = transform;
+
         }
     }
 }
