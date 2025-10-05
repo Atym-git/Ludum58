@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.UI;
 
 public class Item : MonoBehaviour
 {
@@ -8,8 +9,18 @@ public class Item : MonoBehaviour
     
     [field:SerializeField]
     public string ItemNotifText {  get; private set; }
+    
+    [field:SerializeField]
+    public float ItemNotifDuration {  get; private set; }
 
-    private void OnMouseDown()
+    public void Construct(Sprite itemSprite, string itemNotifText, float itemNotifDuration)
+    {
+        ItemSprite = itemSprite;
+        ItemNotifText = itemNotifText;
+        ItemNotifDuration = itemNotifDuration;
+    }
+
+    public void OnMouseDown()
     {
         OnClick();
     }
@@ -25,4 +36,6 @@ public class Item : MonoBehaviour
     }
 
     public void SelfDestruct() => Destroy(gameObject);
+
+
 }

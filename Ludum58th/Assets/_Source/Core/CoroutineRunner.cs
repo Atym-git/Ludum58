@@ -7,9 +7,4 @@ public class CoroutineRunner : MonoBehaviour
     {
         StartCoroutine(coroutine);
     }
-    
-    public void StopRunningCoroutine(IEnumerator coroutine)
-    {
-        StopCoroutine(coroutine);
-    }
 }
