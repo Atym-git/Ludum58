@@ -15,10 +15,7 @@ public class Transition
     {
         _runner = coroutineRunner;
 
-        Debug.Log("CoroutineRunner: " + coroutineRunner);
-        Debug.Log("Runner: " + _runner);
-
-        GetTransformsFromParent(teleportRootsParent);
+        //GetTransformsFromParent(teleportRootsParent);
     }
 
     private void GetTransformsFromParent(Transform rootsParent)
@@ -29,12 +26,12 @@ public class Transition
         }
     }
 
-    public void TeleportTo(Transform playerTransform, int index, GameObject blackScreen)
+    public void TeleportTo(Transform playerTransform, Transform teleportToTransform, GameObject blackScreen)
     {
-        if (index < _teleportRoots.Count)
+        if (teleportToTransform != null)
         {
             _runner.RunCoroutine(Loading(blackScreen));
-            playerTransform.position = _teleportRoots[index].position;
+            playerTransform.position = teleportToTransform.position;
         }
     }
 

@@ -2,11 +2,11 @@ using UnityEngine;
 
 public class Door : MonoBehaviour
 {
-    [SerializeField] private int teleportToIndex = 100;
+    [SerializeField] private Transform teleportToTransform;
 
     private void OnMouseDown()
     {
-        Invoker.InvokeTeleportTo(teleportToIndex);
+        Invoker.InvokeTeleportTo(teleportToTransform);
     }
 
 }

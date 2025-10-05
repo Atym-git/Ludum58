@@ -43,8 +43,8 @@ public class Invoker
                                        _playerData.NotificationDuration);
     }
 
-    public static void InvokeTeleportTo(int rootIndex)
+    public static void InvokeTeleportTo(Transform teleportToTransform)
     {
-        _transition.TeleportTo(_playerData.transform, rootIndex, _playerData.BlackScreen);
+        _transition.TeleportTo(_playerData.transform, teleportToTransform, _playerData.BlackScreen);
     }
 }
