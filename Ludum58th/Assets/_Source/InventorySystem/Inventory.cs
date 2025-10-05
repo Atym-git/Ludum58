@@ -15,15 +15,29 @@ public class Inventory
     public static void AddItem(Item item)
     {
         _items.Add(item);
+        for (int i = 0; i < _items.Count; i++)
+        {
+            Debug.Log("Item: " + i + _items[i]);
+        }
         int itemIndex = _items.Count - 1;
         _invoker.InvokeShowInv(item, itemIndex);
     }
 
-    public void RemoveAtItem(int index)
+    public void RemoveItem(Item item)
     {
-        if (_items[index] != null)
+        if (item != null)
         {
-            _items.RemoveAt(index);
+            for (int i = 0; i < _items.Count; i++)
+            {
+                Debug.Log("Is Inside Cycle" + i);
+                if (_items[i].ItemSprite == item.ItemSprite)
+                {
+                    Debug.Log("Removing Item from inventory with index" + i);
+                    _items.Remove(item);
+                    _invoker.InvokeStopShowingInv(i);
+                }
+            }
+
         }
     }
     

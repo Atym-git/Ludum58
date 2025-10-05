@@ -8,6 +8,7 @@ public class Invoker
     private InventoryVisualizer _inventoryVisualizer;
     private ItemFabric _itemFabric;
     private ResourceLoader _resourceLoader;
+    private CoroutineRunner _coroutineRunner;
 
     private static Transition _transition;
 
@@ -19,7 +20,8 @@ public class Invoker
                    InventoryVisualizer inventoryVisualizer,
                    Transition transition,
                    ItemFabric itemFabric,
-                   ResourceLoader resourceLoader)
+                   ResourceLoader resourceLoader,
+                   CoroutineRunner coroutineRunner)
     {
         _playerMovement = playerMovement;
         _playerData = playerData;
@@ -27,8 +29,11 @@ public class Invoker
         _inventoryVisualizer = inventoryVisualizer;
         _itemFabric = itemFabric;
         _resourceLoader = resourceLoader;
+        _coroutineRunner = coroutineRunner;
 
         _transition = transition;
+
+        InvokeItemsSpawn();
     }
 
     public void InvokeMove(float vertMoveF)
@@ -46,7 +51,7 @@ public class Invoker
     public void InvokeItemsSpawn()
     {
         ItemSO[] itemSOs = _resourceLoader.LoadItemsSO();
-        _itemFabric.InstantiateItems(itemSOs);
+        _itemFabric.InstantiateItems(itemSOs, _coroutineRunner);
     }
 
     public void InvokeShowInv(Item item, int itemIndex)
@@ -55,6 +60,10 @@ public class Invoker
                                        itemIndex,
                                        _playerData.InventoryNotifTMP,
                                        _playerData.NotificationDuration);
+    }
+    public void InvokeStopShowingInv(int itemIndex)
+    {
+        _inventoryVisualizer.StopShowingItems(itemIndex);
     }
 
     public static void InvokeTeleportTo(Transform teleportToTransform)

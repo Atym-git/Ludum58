@@ -12,7 +12,7 @@ public class ItemFabric
         _itemRoots = itemRoots;
     }
 
-    public void InstantiateItems(ItemSO[] itemSOs)
+    public void InstantiateItems(ItemSO[] itemSOs, CoroutineRunner coroutineRunner)
     {
         for (int i = 0; i < itemSOs.Length; i++)
         {
@@ -24,7 +24,10 @@ public class ItemFabric
                 ItemSO itemSO = itemSOs[i];
                 item.Construct(itemSO.ItemSprite,
                                itemSO.ItemNotificationText,
-                               itemSO.ItemNotificationDuration);
+                               itemSO.ItemNotificationDuration,
+                               itemSO.ItemIconDisplayDuration,
+                               itemSO.CouldBeInInventory,
+                               coroutineRunner);
 
             }
         }

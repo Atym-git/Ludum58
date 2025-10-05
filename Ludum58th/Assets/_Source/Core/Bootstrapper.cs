@@ -6,6 +6,7 @@ public class Bootstrapper : MonoBehaviour
     [SerializeField] private InputListener inputListener;
     [SerializeField] private PlayerData playerData;
     [SerializeField] private CoroutineRunner runner;
+    [SerializeField] private List<Slot> slots = new();
 
     [SerializeField] private Transform teleportRootsParent;
 
@@ -33,11 +34,16 @@ public class Bootstrapper : MonoBehaviour
                               inventoryVisualizer,
                               transition,
                               itemFabric,
-                              loader);
+                              loader,
+                              runner);
 
         Inventory inventory = new Inventory(invoker);
 
         inputListener.Construct(invoker);
 
+        for (int i = 0; i < slots.Count; i++)
+        {
+            slots[i].Construct(inventory);
+        }
     }
 }
