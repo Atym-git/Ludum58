@@ -47,7 +47,6 @@ public class InventoryVisualizer
 
             inventoryNotifTMP.text = item.ItemNotifText;
 
-            //_coroutineRunner.StopRunningCoroutine(Delay(notifDuration, inventoryNotifTMP.gameObject));
             _runner.RunCoroutine(Delay(notifDuration, inventoryNotifTMP.gameObject));
         }
         else

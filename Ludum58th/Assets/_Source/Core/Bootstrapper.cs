@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 public class Bootstrapper : MonoBehaviour
@@ -8,10 +9,18 @@ public class Bootstrapper : MonoBehaviour
 
     [SerializeField] private Transform teleportRootsParent;
 
+    [field:Header("Item Data")]
+    [SerializeField] private GameObject itemPrefab;
+    [SerializeField] private List<Transform> itemRoots = new();
+
     private void Awake()
     {
         PlayerMovement playerMovement = new();
         CursorTrack cursorTrack = new();
+        ResourceLoader loader = new();
+
+        ItemFabric itemFabric = new(itemPrefab,
+                                    itemRoots);
 
         Transition transition = new Transition(teleportRootsParent, runner);
 
@@ -22,7 +31,9 @@ public class Bootstrapper : MonoBehaviour
                               playerData,
                               cursorTrack,
                               inventoryVisualizer,
-                              transition);
+                              transition,
+                              itemFabric,
+                              loader);
 
         Inventory inventory = new Inventory(invoker);
 
