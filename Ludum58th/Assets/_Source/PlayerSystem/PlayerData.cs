@@ -3,7 +3,8 @@ using UnityEngine;
 
 public class PlayerData : MonoBehaviour
 {
-    [Header("Player Variables")]
+    [field: Header("Player Variables")]
+
     [field:SerializeField]
     public float PlayerSpeed { get; private set; }
 
@@ -12,7 +13,7 @@ public class PlayerData : MonoBehaviour
     [field:SerializeField]
     public Rigidbody2D PlayerRb { get; private set; }
 
-    [Header("Inventory Data")]
+    [field:Header("Inventory Data")]
 
     [field:SerializeField]
     public float NotificationDuration { get; private set; }
@@ -23,4 +24,8 @@ public class PlayerData : MonoBehaviour
     [field:SerializeField]
     public TextMeshProUGUI InventoryNotifTMP { get; private set; }
 
+    [field:Header("Black Screen")]
+
+    [field: SerializeField]
+    public GameObject BlackScreen { get; private set; }
 }

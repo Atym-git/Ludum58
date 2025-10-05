@@ -168,4 +168,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   inputListener: {fileID: 4091220434465653849}
   playerData: {fileID: 0}
-  coroutineRunner: {fileID: 4673803079070597029}
+  runner: {fileID: 4673803079070597029}
+  teleportRootsParent: {fileID: 0}

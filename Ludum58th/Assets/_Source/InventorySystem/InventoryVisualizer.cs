@@ -9,12 +9,12 @@ public class InventoryVisualizer
     private List<Transform> _inventoryTransforms = new();
     private GameObject _inventoryTransformsParent;
 
-    private CoroutineRunner _coroutineRunner;
+    private CoroutineRunner _runner;
 
     public InventoryVisualizer(Transform inventoryTransformsParent, CoroutineRunner coroutineRunner)
     {
         _inventoryTransformsParent = inventoryTransformsParent.gameObject;
-        _coroutineRunner = coroutineRunner;
+        _runner = coroutineRunner;
 
         GetInventoryTransforms(inventoryTransformsParent);
     }
@@ -48,7 +48,7 @@ public class InventoryVisualizer
             inventoryNotifTMP.text = item.ItemNotifText;
 
             //_coroutineRunner.StopRunningCoroutine(Delay(notifDuration, inventoryNotifTMP.gameObject));
-            _coroutineRunner.RunCoroutine(Delay(notifDuration, inventoryNotifTMP.gameObject));
+            _runner.RunCoroutine(Delay(notifDuration, inventoryNotifTMP.gameObject));
         }
         else
         {

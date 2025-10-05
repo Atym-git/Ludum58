@@ -4,17 +4,25 @@ public class Bootstrapper : MonoBehaviour
 {
     [SerializeField] private InputListener inputListener;
     [SerializeField] private PlayerData playerData;
-    [SerializeField] private CoroutineRunner coroutineRunner;
+    [SerializeField] private CoroutineRunner runner;
+
+    [SerializeField] private Transform teleportRootsParent;
 
     private void Awake()
     {
         PlayerMovement playerMovement = new();
         CursorTrack cursorTrack = new();
 
-        InventoryVisualizer inventoryVisualizer = new InventoryVisualizer(playerData.InventoryIconsParent,
-                                                                          coroutineRunner);
+        Transition transition = new Transition(teleportRootsParent, runner);
 
-        Invoker invoker = new(playerMovement, playerData, cursorTrack, inventoryVisualizer);
+        InventoryVisualizer inventoryVisualizer = new InventoryVisualizer(playerData.InventoryIconsParent,
+                                                                          runner);
+
+        Invoker invoker = new(playerMovement,
+                              playerData,
+                              cursorTrack,
+                              inventoryVisualizer,
+                              transition);
 
         Inventory inventory = new Inventory(invoker);
 
