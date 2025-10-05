@@ -1,32 +1,61 @@
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.UI;
 
 public class Slot : MonoBehaviour/*, IDropHandler*/
 {
-    //public void OnDrop(PointerEventData eventData)
-    //{
-    //    if (eventData.pointerDrag != null)
-    //    {
-    //        //eventData.pointerDrag.GetComponent<RectTransform>().anchoredPosition =
-    //        //    GetComponent<RectTransform>().anchoredPosition;
-    //        GameObject dropped = eventData.pointerDrag;
-    //        DragAndDrop drag = dropped.GetComponent<DragAndDrop>();
-    //        drag.ParentAfterDrag = transform;
-    //    }
-    //}
+    [SerializeField] private List<Transform> requiredItemsParents = new();
+    [SerializeField] private List<Item> requiredItems = new();
 
-    private bool _isDragging;
+    private DraggableContainer _draggableContainer;
+    private Inventory _inventory;
 
-    public void Construct(DraggableContainer container)
+    private int _maxItemIndex = 0;
+    private int _currItemIndex = 0;
+
+    public void Construct(/*DraggableContainer container,*/ Inventory inventory)
     {
-        _isDragging = container.DraggableItem != null;
+        //_draggableContainer = container;
+        _inventory = inventory;
+    }
+
+    private void Start()
+    {
+        _maxItemIndex = requiredItemsParents.Count - 1;
+        for (int i = 0; i < requiredItemsParents.Count; i++)
+        {
+            if (requiredItemsParents[i].childCount > 0)
+            {
+                requiredItems.Add(requiredItemsParents[i]
+                    .GetComponentInChildren<Item>());
+            }
+        }
+
     }
 
     private void OnMouseEnter()
     {
-        if (_isDragging)
-        {
+        Debug.Log("CurrItemIndex = " + _currItemIndex);
 
+        if (DraggableContainer.DraggableItem != null)
+        {
+            Sprite draggableItemSprite = DraggableContainer.DraggableItem
+                .GetComponent<Image>().sprite;
+            Sprite requiredItemSprite = requiredItems[_currItemIndex]
+                .GetComponent<SpriteRenderer>().sprite;
+
+            if (requiredItemSprite == draggableItemSprite)
+            {
+                _inventory.RemoveItem(requiredItems[_currItemIndex]);
+                if (_currItemIndex == _maxItemIndex)
+                {
+                    //Give another item
+                    //Destroy(gameObject);
+                    gameObject.SetActive(false);
+                }
+                _currItemIndex++;
+            }
         }
     }
 }

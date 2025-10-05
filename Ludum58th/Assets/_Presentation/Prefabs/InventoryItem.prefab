@@ -89,3 +89,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ParentAfterDrag: {fileID: 0}
+  parentPanelRT: {fileID: 0}
+  canvas: {fileID: 0}

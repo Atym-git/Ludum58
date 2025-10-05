@@ -12,4 +12,10 @@ public class ItemSO : ScriptableObject
     
     [field: SerializeField]
     public float ItemNotificationDuration { get; private set; }
+    
+    [field: SerializeField]
+    public float ItemIconDisplayDuration { get; private set; }
+    
+    [field: SerializeField]
+    public bool CouldBeInInventory { get; private set; }
 }

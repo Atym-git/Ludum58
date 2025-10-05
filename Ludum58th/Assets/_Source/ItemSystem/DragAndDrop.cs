@@ -7,24 +7,40 @@ public class DragAndDrop : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndD
     private RectTransform _rectTransform;
     private Image _image;
 
-    [HideInInspector] public Transform ParentAfterDrag;
+    private Transform _parentAfterDrag;
 
-    [SerializeField] private RectTransform canvasRT;
+    private RectTransform parentPanelRT;
 
-    [SerializeField] private Canvas canvas;
+    private Canvas canvas;
+
+    private const string ITEMS_PARENT_PANEL_TAG = "ItemsParentPanel";
+
+    private const string PLAYER_CANVAS_TAG = "PlayerCanvas";
+
+    //private DraggableContainer _draggableContainer;
+
+    //public void Construct(DraggableContainer draggableContainer)
+    //{
+    //    _draggableContainer = draggableContainer;
+    //}
 
     private void Start()
     {
+        parentPanelRT = GameObject.FindGameObjectWithTag(ITEMS_PARENT_PANEL_TAG)
+            .GetComponent<RectTransform>();
+        canvas = GameObject.FindGameObjectWithTag(PLAYER_CANVAS_TAG)
+            .GetComponent<Canvas>();
+
         _image = GetComponent<Image>();
         _rectTransform = GetComponent<RectTransform>();
     }
 
     public void OnBeginDrag(PointerEventData eventData)
     {
-        ParentAfterDrag = transform.parent;
-        transform.SetParent(canvasRT);
+        _parentAfterDrag = transform.parent;
+        transform.SetParent(parentPanelRT);
         _image.raycastTarget = false;
-        
+        DraggableContainer.DraggableItem = gameObject;
     }
 
     public void OnDrag(PointerEventData eventData)
@@ -34,7 +50,8 @@ public class DragAndDrop : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndD
 
     public void OnEndDrag(PointerEventData eventData)
     {
-        transform.SetParent(ParentAfterDrag);
+        transform.SetParent(_parentAfterDrag);
         _image.raycastTarget = true;
+        DraggableContainer.DraggableItem = null;
     }
 }

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+using static UnityEditor.Progress;
 
 public class InventoryVisualizer
 {
@@ -40,20 +41,31 @@ public class InventoryVisualizer
 
         if (_inventoryTransforms.Count > rootIndex)
         {
-            item.SelfDestruct();
+            //item.SelfDestruct();
+            item.DisableItem();
 
+            
             _inventoryTransforms[rootIndex].gameObject.SetActive(true);
             _inventoryTransforms[rootIndex].GetComponent<Image>().sprite = item.ItemSprite;
 
-            inventoryNotifTMP.text = item.ItemNotifText;
+            //inventoryNotifTMP.text = item.ItemNotifText;
 
-            _runner.RunCoroutine(Delay(notifDuration, inventoryNotifTMP.gameObject));
+            //_runner.RunCoroutine(Delay(notifDuration, inventoryNotifTMP.gameObject));
         }
         else
         {
             Debug.Log($"Not Enough Place for items; " +
                       $"_inventoryTransforms count = {_inventoryTransforms.Count}");
         }
+    }
+
+    public void StopShowingItems(int rootIndex)
+    {
+        Debug.Log("Root Index: " + rootIndex);
+        //_inventoryTransforms[rootIndex].gameObject.activeInHierarchy = false;
+        //_inventoryTransforms[rootIndex].gameObject.SetActive(false);
+        _inventoryTransforms[rootIndex].GetComponent<Image>().enabled = false;
+        //_inventoryTransforms[rootIndex].GetComponent<Image>().sprite = null;
     }
 
     private void ShowInventory()
@@ -64,11 +76,6 @@ public class InventoryVisualizer
         }
     }
 
-    private IEnumerator Delay(float seconds, GameObject inventoryNotifGO)
-    {
-        inventoryNotifGO.SetActive(true);
-        yield return new WaitForSeconds(seconds);
-        inventoryNotifGO.SetActive(false);
-    }
+
 
 }
