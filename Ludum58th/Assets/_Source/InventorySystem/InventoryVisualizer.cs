@@ -1,9 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
+using UnityEditor.UIElements;
 using UnityEngine;
 using UnityEngine.UI;
-using static UnityEditor.Progress;
 
 public class InventoryVisualizer
 {
@@ -44,9 +44,11 @@ public class InventoryVisualizer
             //item.SelfDestruct();
             item.DisableItem();
 
-            
-            _inventoryTransforms[rootIndex].gameObject.SetActive(true);
-            _inventoryTransforms[rootIndex].GetComponent<Image>().sprite = item.ItemSprite;
+            Image inventoryItemImage = _inventoryTransforms[rootIndex].GetComponent<Image>();
+
+            //_inventoryTransforms[rootIndex].gameObject.SetActive(true);
+            inventoryItemImage.enabled = true;
+            inventoryItemImage.sprite = item.ItemSprite;
 
             //inventoryNotifTMP.text = item.ItemNotifText;
 
@@ -61,10 +63,23 @@ public class InventoryVisualizer
 
     public void StopShowingItems(int rootIndex)
     {
-        Debug.Log("Root Index: " + rootIndex);
-        //_inventoryTransforms[rootIndex].gameObject.activeInHierarchy = false;
-        //_inventoryTransforms[rootIndex].gameObject.SetActive(false);
-        _inventoryTransforms[rootIndex].GetComponent<Image>().enabled = false;
+        //for (int i = 0; i < _inventoryTransforms.Count; i++)
+        //{
+        //    Image inventoryItemImage = _inventoryTransforms[i].GetComponentInChildren<Image>();
+        //    if (itemSprite == inventoryItemImage.sprite)
+        //    {
+        //        inventoryItemImage.enabled = false;
+        //    }
+        //}
+
+        Transform inventoryTransform = _inventoryTransforms[rootIndex];
+        _inventoryTransforms.RemoveAt(rootIndex);
+        Object.Destroy(inventoryTransform.gameObject);
+
+        //inventoryTransform.GetComponent<Image>().enabled = false;
+        //inventoryTransform.SetAsLastSibling();
+        GameObject transformInstance = Object.Instantiate(inventoryTransform.gameObject);
+        _inventoryTransforms.Add(transformInstance.transform);
         //_inventoryTransforms[rootIndex].GetComponent<Image>().sprite = null;
     }
 

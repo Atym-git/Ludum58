@@ -16,4 +16,4 @@ MonoBehaviour:
   <ItemNotificationText>k__BackingField: Didn't get in inventory
   <ItemNotificationDuration>k__BackingField: 3
   <ItemIconDisplayDuration>k__BackingField: 0
-  <CouldBeInInventory>k__BackingField: 0
+  <CouldBeInInventory>k__BackingField: 1

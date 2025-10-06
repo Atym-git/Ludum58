@@ -11,18 +11,18 @@ public class PlayerData : MonoBehaviour
     [Header("Player GameComponents (Don't touch)")]
 
     [field:SerializeField]
-    public Rigidbody2D PlayerRb { get; private set; }
+    public Rigidbody PlayerRb { get; private set; }
 
-    [field:Header("Inventory Data")]
+    //[field:Header("Inventory Data")]
 
-    [field:SerializeField]
-    public float NotificationDuration { get; private set; }
-    
-    [field:SerializeField]
+    //[field:SerializeField]
+    //public float NotificationDuration { get; private set; }
+
+    [field: SerializeField]
     public Transform InventoryIconsParent { get; private set; }
-    
-    [field:SerializeField]
-    public TextMeshProUGUI InventoryNotifTMP { get; private set; }
+
+    //[field:SerializeField]
+    //public TextMeshProUGUI InventoryNotifTMP { get; private set; }
 
     [field:Header("Black Screen")]
 

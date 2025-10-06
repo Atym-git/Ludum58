@@ -27,16 +27,25 @@ public class Inventory
     {
         if (item != null)
         {
-            for (int i = 0; i < _items.Count; i++)
-            {
-                Debug.Log("Is Inside Cycle" + i);
-                if (_items[i].ItemSprite == item.ItemSprite)
-                {
-                    Debug.Log("Removing Item from inventory with index" + i);
-                    _items.Remove(item);
-                    _invoker.InvokeStopShowingInv(i);
-                }
-            }
+            Debug.Log("Before removing Items Count: " + _items.Count);
+            int index = _items.IndexOf(item);
+            Debug.Log("Items Index of: " + index);
+            _invoker.InvokeStopShowingInv(index);
+            _items.Remove(item);
+            Debug.Log("After removing Items Count: " + _items.Count);
+            //for (int i = 0; i < _items.Count; i++)
+            //{
+            //    Debug.Log("Is Inside Cycle" + i);
+            //    if (_items[i].ItemSprite == item.ItemSprite)
+            //    {
+                    
+                    
+            //        //Debug.Log("Item after removing: " + _items[i]);
+            //        _invoker.InvokeStopShowingInv(i);
+            //    }
+            //    Debug.Log("_items[i].ItemSprite: " + _items[i].ItemSprite);
+            //    Debug.Log("item.ItemSprite " + item.ItemSprite);
+            //}
 
         }
     }

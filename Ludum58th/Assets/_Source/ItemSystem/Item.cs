@@ -1,38 +1,39 @@
 using TMPro;
 using UnityEngine;
 using System.Collections;
-using static UnityEditor.Progress;
 using Unity.VisualScripting;
 
 public class Item : MonoBehaviour
 {
+    private const string INVENTORY_NOTIFICATION_TMP_TAG = "InventoryNotificationTMP";
+
     [field:SerializeField]
     public Sprite ItemSprite {  get; private set; }
 
-    private string _itemNotifText;
+    [SerializeField] private string _itemNotifText;
 
-    private float _itemNotifDuration;
+    [field:SerializeField]
+    public float NotificationDuration { get; private set; }
+
     private float _itemIconDisplayDuration;
 
     private bool _couldBeInInventory;
     
-    private TextMeshProUGUI _inventoryNotifTMP;
+    public TextMeshProUGUI InventoryNotifTMP;
 
-    private const string INVENTORY_NOTIFICATION_TMP_TAG = "InventoryNotificationTMP";
-
-    private CoroutineRunner _coroutineRunner;
+    [SerializeField] private CoroutineRunner _coroutineRunner;
 
     public void Construct(Sprite itemSprite,
                           string itemNotifText,
                           float itemNotifDuration,
                           float itemIconDisplayDuration,
-                          bool couldBePickedUp, 
+                          bool couldBeInInventory,
                           CoroutineRunner coroutineRunner)
     {
         ItemSprite = itemSprite;
         _itemNotifText = itemNotifText;
-        _itemNotifDuration = itemNotifDuration;
-        _couldBeInInventory = couldBePickedUp;
+        NotificationDuration = itemNotifDuration;
+        _couldBeInInventory = couldBeInInventory;
         _coroutineRunner = coroutineRunner;
 
         GetComponent<SpriteRenderer>().sprite = itemSprite;
@@ -45,7 +46,7 @@ public class Item : MonoBehaviour
 
     private void Start()
     {
-        _inventoryNotifTMP = GameObject.FindGameObjectWithTag(INVENTORY_NOTIFICATION_TMP_TAG)
+        InventoryNotifTMP = GameObject.FindGameObjectWithTag(INVENTORY_NOTIFICATION_TMP_TAG)
             .GetComponent<TextMeshProUGUI>();
     }
 
@@ -63,9 +64,9 @@ public class Item : MonoBehaviour
             SelfDestruct();
         }
 
-        _inventoryNotifTMP.text = item._itemNotifText;
+        InventoryNotifTMP.text = item._itemNotifText;
 
-        _coroutineRunner.RunCoroutine(NotifyDuration(_itemNotifDuration, _inventoryNotifTMP.gameObject));
+        _coroutineRunner.RunCoroutine(NotifyDuration(NotificationDuration, InventoryNotifTMP.gameObject));
     }
 
     public void SelfDestruct() => Destroy(gameObject);
