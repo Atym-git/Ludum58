@@ -68,9 +68,9 @@ public class InventoryVisualizer
         //_inventoryTransforms[rootIndex].gameObject.SetActive(false);
         Transform inventoryTransform = _inventoryTransforms[rootIndex];
         inventoryTransform.GetComponent<Image>().enabled = false;
-        inventoryTransform.SetAsLastSibling();
-        _inventoryTransforms.RemoveAt(rootIndex);
-        _inventoryTransforms.Add(inventoryTransform);
+        //inventoryTransform.SetAsLastSibling();
+        //_inventoryTransforms.RemoveAt(rootIndex);
+        //_inventoryTransforms.Add(inventoryTransform);
         //_inventoryTransforms[rootIndex].GetComponent<Image>().sprite = null;
     }
 
