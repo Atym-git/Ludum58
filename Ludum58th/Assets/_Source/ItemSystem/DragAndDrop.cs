@@ -4,6 +4,10 @@ using UnityEngine.UI;
 
 public class DragAndDrop : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDragHandler
 {
+    private const string ITEMS_PARENT_PANEL_TAG = "ItemsParentPanel";
+
+    private const string PLAYER_CANVAS_TAG = "PlayerCanvas";
+
     private RectTransform _rectTransform;
     private Image _image;
 
@@ -12,10 +16,6 @@ public class DragAndDrop : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndD
     private RectTransform parentPanelRT;
 
     private Canvas canvas;
-
-    private const string ITEMS_PARENT_PANEL_TAG = "ItemsParentPanel";
-
-    private const string PLAYER_CANVAS_TAG = "PlayerCanvas";
 
     //private DraggableContainer _draggableContainer;
 

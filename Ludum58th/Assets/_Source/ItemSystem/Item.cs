@@ -6,33 +6,34 @@ using Unity.VisualScripting;
 
 public class Item : MonoBehaviour
 {
+    private const string INVENTORY_NOTIFICATION_TMP_TAG = "InventoryNotificationTMP";
+
     [field:SerializeField]
     public Sprite ItemSprite {  get; private set; }
 
-    private string _itemNotifText;
+    [SerializeField] private string _itemNotifText;
 
-    private float _itemNotifDuration;
+    [SerializeField] private float _itemNotifDuration;
+
     private float _itemIconDisplayDuration;
 
     private bool _couldBeInInventory;
     
     private TextMeshProUGUI _inventoryNotifTMP;
 
-    private const string INVENTORY_NOTIFICATION_TMP_TAG = "InventoryNotificationTMP";
-
-    private CoroutineRunner _coroutineRunner;
+    [SerializeField] private CoroutineRunner _coroutineRunner;
 
     public void Construct(Sprite itemSprite,
                           string itemNotifText,
                           float itemNotifDuration,
                           float itemIconDisplayDuration,
-                          bool couldBePickedUp, 
+                          bool couldBeInInventory,
                           CoroutineRunner coroutineRunner)
     {
         ItemSprite = itemSprite;
         _itemNotifText = itemNotifText;
         _itemNotifDuration = itemNotifDuration;
-        _couldBeInInventory = couldBePickedUp;
+        _couldBeInInventory = couldBeInInventory;
         _coroutineRunner = coroutineRunner;
 
         GetComponent<SpriteRenderer>().sprite = itemSprite;

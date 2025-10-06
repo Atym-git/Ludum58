@@ -14,6 +14,8 @@ public class Slot : MonoBehaviour/*, IDropHandler*/
     private int _maxItemIndex = 0;
     private int _currItemIndex = 0;
 
+    [SerializeField] private Item givingItem;
+
     public void Construct(/*DraggableContainer container,*/ Inventory inventory)
     {
         //_draggableContainer = container;
@@ -52,6 +54,7 @@ public class Slot : MonoBehaviour/*, IDropHandler*/
                 {
                     //Give another item
                     //Destroy(gameObject);
+                    Inventory.AddItem(givingItem);
                     gameObject.SetActive(false);
                 }
                 _currItemIndex++;

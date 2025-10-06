@@ -44,9 +44,11 @@ public class InventoryVisualizer
             //item.SelfDestruct();
             item.DisableItem();
 
-            
-            _inventoryTransforms[rootIndex].gameObject.SetActive(true);
-            _inventoryTransforms[rootIndex].GetComponent<Image>().sprite = item.ItemSprite;
+            Image inventoryItemImage = _inventoryTransforms[rootIndex].GetComponent<Image>();
+
+            //_inventoryTransforms[rootIndex].gameObject.SetActive(true);
+            inventoryItemImage.enabled = true;
+            inventoryItemImage.sprite = item.ItemSprite;
 
             //inventoryNotifTMP.text = item.ItemNotifText;
 
@@ -64,7 +66,11 @@ public class InventoryVisualizer
         Debug.Log("Root Index: " + rootIndex);
         //_inventoryTransforms[rootIndex].gameObject.activeInHierarchy = false;
         //_inventoryTransforms[rootIndex].gameObject.SetActive(false);
-        _inventoryTransforms[rootIndex].GetComponent<Image>().enabled = false;
+        Transform inventoryTransform = _inventoryTransforms[rootIndex];
+        inventoryTransform.GetComponent<Image>().enabled = false;
+        inventoryTransform.SetAsLastSibling();
+        _inventoryTransforms.RemoveAt(rootIndex);
+        _inventoryTransforms.Add(inventoryTransform);
         //_inventoryTransforms[rootIndex].GetComponent<Image>().sprite = null;
     }
 
