@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
+using UnityEditor.UIElements;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -62,14 +63,23 @@ public class InventoryVisualizer
 
     public void StopShowingItems(int rootIndex)
     {
-        Debug.Log("Root Index: " + rootIndex);
-        //_inventoryTransforms[rootIndex].gameObject.activeInHierarchy = false;
-        //_inventoryTransforms[rootIndex].gameObject.SetActive(false);
+        //for (int i = 0; i < _inventoryTransforms.Count; i++)
+        //{
+        //    Image inventoryItemImage = _inventoryTransforms[i].GetComponentInChildren<Image>();
+        //    if (itemSprite == inventoryItemImage.sprite)
+        //    {
+        //        inventoryItemImage.enabled = false;
+        //    }
+        //}
+
         Transform inventoryTransform = _inventoryTransforms[rootIndex];
-        inventoryTransform.GetComponent<Image>().enabled = false;
+        _inventoryTransforms.RemoveAt(rootIndex);
+        Object.Destroy(inventoryTransform.gameObject);
+
+        //inventoryTransform.GetComponent<Image>().enabled = false;
         //inventoryTransform.SetAsLastSibling();
-        //_inventoryTransforms.RemoveAt(rootIndex);
-        //_inventoryTransforms.Add(inventoryTransform);
+        GameObject transformInstance = Object.Instantiate(inventoryTransform.gameObject);
+        _inventoryTransforms.Add(transformInstance.transform);
         //_inventoryTransforms[rootIndex].GetComponent<Image>().sprite = null;
     }
 

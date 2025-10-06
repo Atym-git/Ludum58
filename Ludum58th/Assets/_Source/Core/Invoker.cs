@@ -61,9 +61,10 @@ public class Invoker
                                        item.InventoryNotifTMP,
                                        item.NotificationDuration);
     }
-    public void InvokeStopShowingInv(int itemIndex)
+
+    public void InvokeStopShowingInv(int rootIndex)
     {
-        _inventoryVisualizer.StopShowingItems(itemIndex);
+        _inventoryVisualizer.StopShowingItems(rootIndex);
     }
 
     public static void InvokeTeleportTo(Transform teleportToTransform)

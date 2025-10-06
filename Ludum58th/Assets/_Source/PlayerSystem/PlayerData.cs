@@ -11,7 +11,7 @@ public class PlayerData : MonoBehaviour
     [Header("Player GameComponents (Don't touch)")]
 
     [field:SerializeField]
-    public Rigidbody2D PlayerRb { get; private set; }
+    public Rigidbody PlayerRb { get; private set; }
 
     //[field:Header("Inventory Data")]
 

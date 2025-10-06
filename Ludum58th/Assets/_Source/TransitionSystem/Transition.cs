@@ -7,7 +7,7 @@ public class Transition
 {
     private List<Transform> _teleportRoots = new();
 
-    private const int BLACK_SCREEN_DURATION = 1;
+    private const float BLACK_SCREEN_DURATION = 0.5f;
 
     private CoroutineRunner _runner;
 
