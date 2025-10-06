@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 379fd36feb28baa468046de9e6191256, type: 3}
-  m_Name: ItemSO
+  m_Name: poroshockSO24
   m_EditorClassIdentifier: 
-  <ItemSprite>k__BackingField: {fileID: 10901, guid: 0000000000000000f000000000000000, type: 0}
-  <ItemNotificationText>k__BackingField: Got in inventory
-  <ItemNotificationDuration>k__BackingField: 3
+  <ItemSprite>k__BackingField: {fileID: 7581996607698189666, guid: 38ace652b3d3f454c8d330a7dc4b476d, type: 3}
+  <ItemNotificationText>k__BackingField: 5
+  <ItemNotificationDuration>k__BackingField: 5
   <ItemIconDisplayDuration>k__BackingField: 0
   <CouldBeInInventory>k__BackingField: 1
