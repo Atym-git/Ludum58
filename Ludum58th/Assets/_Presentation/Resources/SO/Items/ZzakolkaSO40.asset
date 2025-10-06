@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 379fd36feb28baa468046de9e6191256, type: 3}
-  m_Name: ZgalstykSO39
+  m_Name: ZzakolkaSO40
   m_EditorClassIdentifier: 
-  <ItemSprite>k__BackingField: {fileID: -1849187617738907995, guid: cf16188229ee8544f84ed5d3c0c5bc78, type: 3}
+  <ItemSprite>k__BackingField: {fileID: 1316234479194557214, guid: 289ae91d048d2f340a4adf37abb3de3e, type: 3}
   <ItemNotificationText>k__BackingField: 5
   <ItemNotificationDuration>k__BackingField: 5
   <ItemIconDisplayDuration>k__BackingField: 0
