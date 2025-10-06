@@ -167,11 +167,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 88793142d2b8e924eab7be1b8d07f78b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  <PlayerSpeed>k__BackingField: 5
+  <PlayerSpeed>k__BackingField: 7.5
   <PlayerRb>k__BackingField: {fileID: 792485925009003828}
-  <NotificationDuration>k__BackingField: 0
   <InventoryIconsParent>k__BackingField: {fileID: 8198929543112085972}
-  <InventoryNotifTMP>k__BackingField: {fileID: 6618907771460809095}
   <BlackScreen>k__BackingField: {fileID: 0}
 --- !u!1 &1523716954720920282
 GameObject:
@@ -612,7 +610,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &8558424378989056084
 RectTransform:
   m_ObjectHideFlags: 0

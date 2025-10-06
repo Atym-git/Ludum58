@@ -1,7 +1,6 @@
 using TMPro;
 using UnityEngine;
 using System.Collections;
-using static UnityEditor.Progress;
 using Unity.VisualScripting;
 
 public class Item : MonoBehaviour
@@ -13,13 +12,14 @@ public class Item : MonoBehaviour
 
     [SerializeField] private string _itemNotifText;
 
-    [SerializeField] private float _itemNotifDuration;
+    [field:SerializeField]
+    public float NotificationDuration { get; private set; }
 
     private float _itemIconDisplayDuration;
 
     private bool _couldBeInInventory;
     
-    private TextMeshProUGUI _inventoryNotifTMP;
+    public TextMeshProUGUI InventoryNotifTMP;
 
     [SerializeField] private CoroutineRunner _coroutineRunner;
 
@@ -32,7 +32,7 @@ public class Item : MonoBehaviour
     {
         ItemSprite = itemSprite;
         _itemNotifText = itemNotifText;
-        _itemNotifDuration = itemNotifDuration;
+        NotificationDuration = itemNotifDuration;
         _couldBeInInventory = couldBeInInventory;
         _coroutineRunner = coroutineRunner;
 
@@ -46,7 +46,7 @@ public class Item : MonoBehaviour
 
     private void Start()
     {
-        _inventoryNotifTMP = GameObject.FindGameObjectWithTag(INVENTORY_NOTIFICATION_TMP_TAG)
+        InventoryNotifTMP = GameObject.FindGameObjectWithTag(INVENTORY_NOTIFICATION_TMP_TAG)
             .GetComponent<TextMeshProUGUI>();
     }
 
@@ -64,9 +64,9 @@ public class Item : MonoBehaviour
             SelfDestruct();
         }
 
-        _inventoryNotifTMP.text = item._itemNotifText;
+        InventoryNotifTMP.text = item._itemNotifText;
 
-        _coroutineRunner.RunCoroutine(NotifyDuration(_itemNotifDuration, _inventoryNotifTMP.gameObject));
+        _coroutineRunner.RunCoroutine(NotifyDuration(NotificationDuration, InventoryNotifTMP.gameObject));
     }
 
     public void SelfDestruct() => Destroy(gameObject);

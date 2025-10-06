@@ -58,8 +58,8 @@ public class Invoker
     {
         _inventoryVisualizer.ShowItems(item,
                                        itemIndex,
-                                       _playerData.InventoryNotifTMP,
-                                       _playerData.NotificationDuration);
+                                       item.InventoryNotifTMP,
+                                       item.NotificationDuration);
     }
     public void InvokeStopShowingInv(int itemIndex)
     {
