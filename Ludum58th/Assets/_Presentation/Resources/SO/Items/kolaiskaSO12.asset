@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: kolaiskaSO12
   m_EditorClassIdentifier: 
   <ItemSprite>k__BackingField: {fileID: 6462300481336206686, guid: de16465257da6bf42b899728661b64e5, type: 3}
-  <ItemNotificationText>k__BackingField: 5
+  <ItemNotificationText>k__BackingField: A stroller for Lena's favorite doll
   <ItemNotificationDuration>k__BackingField: 5
   <ItemIconDisplayDuration>k__BackingField: 0
   <CouldBeInInventory>k__BackingField: 1

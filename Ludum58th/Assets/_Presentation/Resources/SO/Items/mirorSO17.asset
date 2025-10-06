@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: mirorSO17
   m_EditorClassIdentifier: 
   <ItemSprite>k__BackingField: {fileID: 10915, guid: 0000000000000000f000000000000000, type: 0}
-  <ItemNotificationText>k__BackingField: 5
+  <ItemNotificationText>k__BackingField: Is this how I look now..? Olya would tell
+    me if she saw what I've turned myself into..
   <ItemNotificationDuration>k__BackingField: 5
   <ItemIconDisplayDuration>k__BackingField: 0
   <CouldBeInInventory>k__BackingField: 0

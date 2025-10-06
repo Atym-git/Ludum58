@@ -13,7 +13,9 @@ MonoBehaviour:
   m_Name: Z_telecSO39
   m_EditorClassIdentifier: 
   <ItemSprite>k__BackingField: {fileID: 1316234479194557214, guid: 289ae91d048d2f340a4adf37abb3de3e, type: 3}
-  <ItemNotificationText>k__BackingField: 5
+  <ItemNotificationText>k__BackingField: I'm not in the mood to turn it on at all...
+    I used to watch "Goodnight Kids" with Lena.. But I don't want to watch them alone,
+    and I don't want to watch anything else.
   <ItemNotificationDuration>k__BackingField: 5
   <ItemIconDisplayDuration>k__BackingField: 0
   <CouldBeInInventory>k__BackingField: 0

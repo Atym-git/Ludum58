@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: lopatkaSO15
   m_EditorClassIdentifier: 
   <ItemSprite>k__BackingField: {fileID: -5572782968142627688, guid: 3d8911d59d2b3a14b8f23f6e930c9e41, type: 3}
-  <ItemNotificationText>k__BackingField: 5
+  <ItemNotificationText>k__BackingField: It seems that Lenochka hasn't used it for
+    a long time... I'm too old to play in the sandbox.
   <ItemNotificationDuration>k__BackingField: 5
   <ItemIconDisplayDuration>k__BackingField: 0
   <CouldBeInInventory>k__BackingField: 1

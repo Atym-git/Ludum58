@@ -13,7 +13,9 @@ MonoBehaviour:
   m_Name: teapodSO33
   m_EditorClassIdentifier: 
   <ItemSprite>k__BackingField: {fileID: -6366223952214917864, guid: 1cb09700cebd9b348bfa47e2e5352ab2, type: 3}
-  <ItemNotificationText>k__BackingField: 5
+  <ItemNotificationText>k__BackingField: Teapot... Olya snatched it from a sale..?
+    She loved him very much and always put him in the center of the table.. We have
+    never drunk tea from it... After all, it was always "for a special occasion"
   <ItemNotificationDuration>k__BackingField: 5
   <ItemIconDisplayDuration>k__BackingField: 0
   <CouldBeInInventory>k__BackingField: 1

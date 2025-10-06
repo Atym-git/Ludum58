@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: holodilnikSO10
   m_EditorClassIdentifier: 
   <ItemSprite>k__BackingField: {fileID: 10915, guid: 0000000000000000f000000000000000, type: 0}
-  <ItemNotificationText>k__BackingField: 5
+  <ItemNotificationText>k__BackingField: There's no food in it right now, but all
+    the magnets are in place... From all the places we visited as a family
   <ItemNotificationDuration>k__BackingField: 5
   <ItemIconDisplayDuration>k__BackingField: 0
   <CouldBeInInventory>k__BackingField: 0

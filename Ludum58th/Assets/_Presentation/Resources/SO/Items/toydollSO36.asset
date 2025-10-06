@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: toydollSO36
   m_EditorClassIdentifier: 
   <ItemSprite>k__BackingField: {fileID: 4669912288876402424, guid: 38cf87dfe57be374fa5dddc62130cfc0, type: 3}
-  <ItemNotificationText>k__BackingField: 5
+  <ItemNotificationText>k__BackingField: Life had battered her... But now she looks
+    the same as the last time she was in Lenochka's arms.
   <ItemNotificationDuration>k__BackingField: 5
   <ItemIconDisplayDuration>k__BackingField: 0
   <CouldBeInInventory>k__BackingField: 1

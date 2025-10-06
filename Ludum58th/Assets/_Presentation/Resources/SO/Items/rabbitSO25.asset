@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: rabbitSO25
   m_EditorClassIdentifier: 
   <ItemSprite>k__BackingField: {fileID: 7211630969972830702, guid: f6a0f6e66a284ef43aa54730db6c7a97, type: 3}
-  <ItemNotificationText>k__BackingField: 5
+  <ItemNotificationText>k__BackingField: Her grandmother gave her this rabbit for
+    5 years.
   <ItemNotificationDuration>k__BackingField: 5
   <ItemIconDisplayDuration>k__BackingField: 0
   <CouldBeInInventory>k__BackingField: 1

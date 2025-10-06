@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: stiralkaSO29
   m_EditorClassIdentifier: 
   <ItemSprite>k__BackingField: {fileID: 10915, guid: 0000000000000000f000000000000000, type: 0}
-  <ItemNotificationText>k__BackingField: 5
+  <ItemNotificationText>k__BackingField: This washing machine is older than me, but
+    it's still holding up.
   <ItemNotificationDuration>k__BackingField: 5
   <ItemIconDisplayDuration>k__BackingField: 0
   <CouldBeInInventory>k__BackingField: 0

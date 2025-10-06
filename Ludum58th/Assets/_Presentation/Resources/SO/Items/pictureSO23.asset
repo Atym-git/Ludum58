@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: pictureSO23
   m_EditorClassIdentifier: 
   <ItemSprite>k__BackingField: {fileID: 2016670448068482061, guid: 797856d84f76f144880f5d1c56643724, type: 3}
-  <ItemNotificationText>k__BackingField: 5
+  <ItemNotificationText>k__BackingField: 
   <ItemNotificationDuration>k__BackingField: 5
   <ItemIconDisplayDuration>k__BackingField: 0
   <CouldBeInInventory>k__BackingField: 1

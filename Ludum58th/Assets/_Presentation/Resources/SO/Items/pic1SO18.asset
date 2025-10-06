@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: pic1SO18
   m_EditorClassIdentifier: 
   <ItemSprite>k__BackingField: {fileID: 10915, guid: 0000000000000000f000000000000000, type: 0}
-  <ItemNotificationText>k__BackingField: 5
+  <ItemNotificationText>k__BackingField: '"Anastasia.".. we sailed on it on our honeymoon
+    for a whole week. Just think about it... It''s been almost 11 years'
   <ItemNotificationDuration>k__BackingField: 5
   <ItemIconDisplayDuration>k__BackingField: 0
   <CouldBeInInventory>k__BackingField: 0
