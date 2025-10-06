@@ -14,7 +14,11 @@ public class Slot : MonoBehaviour/*, IDropHandler*/
     private int _maxItemIndex = 0;
     private int _currItemIndex = 0;
 
+    [SerializeField] private Sprite _spriteAfterUsingItem;
+
     [SerializeField] private Item givingItem;
+
+    private GameObject draggableItem;
 
     public void Construct(/*DraggableContainer container,*/ Inventory inventory)
     {
@@ -36,10 +40,15 @@ public class Slot : MonoBehaviour/*, IDropHandler*/
 
     }
 
-    private void OnMouseUp()
+    private void OnMouseEnter()
     {
+        draggableItem = DraggableContainer.DraggableItem;
+        Debug.Log("DraggableItem: " + draggableItem);
+    }
 
-        if (DraggableContainer.DraggableItem != null)
+    public void OnItemDrop()
+    {
+        if (draggableItem != null)
         {
             Sprite draggableItemSprite = DraggableContainer.DraggableItem
                 .GetComponent<Image>().sprite;
@@ -48,6 +57,7 @@ public class Slot : MonoBehaviour/*, IDropHandler*/
 
             if (requiredItemSprite == draggableItemSprite)
             {
+                Debug.Log("Should remove the items");
                 _inventory.RemoveItem(requiredItems[_currItemIndex]);
                 if (_currItemIndex == _maxItemIndex)
                 {
@@ -55,7 +65,14 @@ public class Slot : MonoBehaviour/*, IDropHandler*/
                     gameObject.SetActive(false);
                 }
                 _currItemIndex++;
+                if (_spriteAfterUsingItem != null)
+                {
+                    GetComponent<SpriteRenderer>().sprite = _spriteAfterUsingItem;
+                }
             }
+            draggableItem = null;
         }
+
     }
+
 }

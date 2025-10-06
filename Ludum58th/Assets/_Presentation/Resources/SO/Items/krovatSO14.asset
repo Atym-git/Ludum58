@@ -12,7 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 379fd36feb28baa468046de9e6191256, type: 3}
   m_Name: krovatSO14
   m_EditorClassIdentifier: 
-  <ItemSprite>k__BackingField: {fileID: 10915, guid: 0000000000000000f000000000000000, type: 0}
+  <ItemSprite>k__BackingField: {fileID: -2454701323059848432, guid: d1e2bdb186876ff48954734695df8dff, type: 3}
+  <ItemPrefab>k__BackingField: {fileID: 361193814986622858, guid: e1c893ee33c32184a9bdcdf008969ef7, type: 3}
   <ItemNotificationText>k__BackingField: We bought it when Lenochka turned 3 years
     old. She chose this warm plaid bedspread herself.
   <ItemNotificationDuration>k__BackingField: 5

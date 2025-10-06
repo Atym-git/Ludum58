@@ -12,7 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 379fd36feb28baa468046de9e6191256, type: 3}
   m_Name: kolaiskaSO12
   m_EditorClassIdentifier: 
-  <ItemSprite>k__BackingField: {fileID: 6462300481336206686, guid: de16465257da6bf42b899728661b64e5, type: 3}
+  <ItemSprite>k__BackingField: {fileID: 6214192850129658601, guid: 15139c1fe0a88564e80ac1df4de0530e, type: 3}
+  <ItemPrefab>k__BackingField: {fileID: 4041070757874560365, guid: d04dbcbf76b70d941b512a3324cfe9fe, type: 3}
   <ItemNotificationText>k__BackingField: A stroller for Lena's favorite doll
   <ItemNotificationDuration>k__BackingField: 5
   <ItemIconDisplayDuration>k__BackingField: 0

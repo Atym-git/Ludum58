@@ -12,7 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 379fd36feb28baa468046de9e6191256, type: 3}
   m_Name: carperBathSO5
   m_EditorClassIdentifier: 
-  <ItemSprite>k__BackingField: {fileID: 0}
+  <ItemSprite>k__BackingField: {fileID: 1670185139431940604, guid: 0d12542eb98b60a4caad6137b35017e4, type: 3}
+  <ItemPrefab>k__BackingField: {fileID: 3272823191932016417, guid: e49b73d8209bd82478bfa0d585592229, type: 3}
   <ItemNotificationText>k__BackingField: What's under the carpet..? It's a drawing...
     which Lena gave me back in first grade... Our family...
   <ItemNotificationDuration>k__BackingField: 5

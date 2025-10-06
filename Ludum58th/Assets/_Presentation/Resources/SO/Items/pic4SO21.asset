@@ -12,7 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 379fd36feb28baa468046de9e6191256, type: 3}
   m_Name: pic4SO21
   m_EditorClassIdentifier: 
-  <ItemSprite>k__BackingField: {fileID: 10915, guid: 0000000000000000f000000000000000, type: 0}
+  <ItemSprite>k__BackingField: {fileID: 110772055705746150, guid: babedb35cc412e642b822c760acb8cb7, type: 3}
+  <ItemPrefab>k__BackingField: {fileID: 8596283772843718913, guid: b5d8a040cf230a54990d9477054b3c78, type: 3}
   <ItemNotificationText>k__BackingField: My parents sent this photo when we bought
     this apartment and started to renovate it. They said, "So that you don't forget
     to take your granddaughter to our seaside."

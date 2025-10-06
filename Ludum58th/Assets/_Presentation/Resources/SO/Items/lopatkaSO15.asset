@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: lopatkaSO15
   m_EditorClassIdentifier: 
   <ItemSprite>k__BackingField: {fileID: -5572782968142627688, guid: 3d8911d59d2b3a14b8f23f6e930c9e41, type: 3}
+  <ItemPrefab>k__BackingField: {fileID: 7613125309581920968, guid: 0dc86ab6cce006b42a2e56d749b56a83, type: 3}
   <ItemNotificationText>k__BackingField: It seems that Lenochka hasn't used it for
     a long time... I'm too old to play in the sandbox.
   <ItemNotificationDuration>k__BackingField: 5

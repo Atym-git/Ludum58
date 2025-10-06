@@ -12,7 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 379fd36feb28baa468046de9e6191256, type: 3}
   m_Name: pic2SO19
   m_EditorClassIdentifier: 
-  <ItemSprite>k__BackingField: {fileID: 10915, guid: 0000000000000000f000000000000000, type: 0}
+  <ItemSprite>k__BackingField: {fileID: -7538016591321506521, guid: 2647848599db659438c54072d119db21, type: 3}
+  <ItemPrefab>k__BackingField: {fileID: 3169791708134955521, guid: d6e6b88562c700247affe0af9c574f0a, type: 3}
   <ItemNotificationText>k__BackingField: Vladimir Grigorievich Shukhov... A great
     man. I once wanted to. so that my name remains on the pages of history as well.
   <ItemNotificationDuration>k__BackingField: 5

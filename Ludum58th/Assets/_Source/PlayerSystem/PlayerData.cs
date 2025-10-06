@@ -12,6 +12,9 @@ public class PlayerData : MonoBehaviour
 
     [field:SerializeField]
     public Rigidbody PlayerRb { get; private set; }
+    
+    [field:SerializeField]
+    public Transform CharacterTransform { get; private set; }
 
     //[field:Header("Inventory Data")]
 

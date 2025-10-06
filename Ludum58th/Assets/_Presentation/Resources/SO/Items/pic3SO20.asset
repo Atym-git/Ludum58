@@ -12,7 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 379fd36feb28baa468046de9e6191256, type: 3}
   m_Name: pic3SO20
   m_EditorClassIdentifier: 
-  <ItemSprite>k__BackingField: {fileID: 10915, guid: 0000000000000000f000000000000000, type: 0}
+  <ItemSprite>k__BackingField: {fileID: -1065807777586536066, guid: cc9e5e1dfab31124fa0d47629ef9c585, type: 3}
+  <ItemPrefab>k__BackingField: {fileID: 8202132209500208555, guid: 447e181d4bbe0d64f83a89cc105a9636, type: 3}
   <ItemNotificationText>k__BackingField: Olya called it the "Tree of Knowledge."
     I remember when she was still at the institute, she was fond of painting and
     sometimes wrote stories from books...

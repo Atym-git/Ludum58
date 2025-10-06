@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
-using UnityEditor.UIElements;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -31,11 +30,11 @@ public class InventoryVisualizer
                 int singleChild = 0;
                 _inventoryTransforms.Add(child.GetChild(singleChild));
             }
-            
+
         }
     }
 
-    public void ShowItems(Item item, int rootIndex, TextMeshProUGUI inventoryNotifTMP, float notifDuration)
+    public void ShowItems(Item item, int rootIndex)
     {
         ShowInventory();
 
@@ -46,13 +45,8 @@ public class InventoryVisualizer
 
             Image inventoryItemImage = _inventoryTransforms[rootIndex].GetComponent<Image>();
 
-            //_inventoryTransforms[rootIndex].gameObject.SetActive(true);
             inventoryItemImage.enabled = true;
             inventoryItemImage.sprite = item.ItemSprite;
-
-            //inventoryNotifTMP.text = item.ItemNotifText;
-
-            //_runner.RunCoroutine(Delay(notifDuration, inventoryNotifTMP.gameObject));
         }
         else
         {
@@ -61,26 +55,18 @@ public class InventoryVisualizer
         }
     }
 
-    public void StopShowingItems(int rootIndex)
+    public void RemapItemsPlaces(List<Item> items)
     {
-        //for (int i = 0; i < _inventoryTransforms.Count; i++)
-        //{
-        //    Image inventoryItemImage = _inventoryTransforms[i].GetComponentInChildren<Image>();
-        //    if (itemSprite == inventoryItemImage.sprite)
-        //    {
-        //        inventoryItemImage.enabled = false;
-        //    }
-        //}
-
-        Transform inventoryTransform = _inventoryTransforms[rootIndex];
-        _inventoryTransforms.RemoveAt(rootIndex);
-        Object.Destroy(inventoryTransform.gameObject);
-
-        //inventoryTransform.GetComponent<Image>().enabled = false;
-        //inventoryTransform.SetAsLastSibling();
-        GameObject transformInstance = Object.Instantiate(inventoryTransform.gameObject);
-        _inventoryTransforms.Add(transformInstance.transform);
-        //_inventoryTransforms[rootIndex].GetComponent<Image>().sprite = null;
+        for (int i = 0; i < items.Count; i++)
+        {
+            Image inventoryItemImage = _inventoryTransforms[i].GetComponent<Image>();
+            inventoryItemImage.sprite = items[i].ItemSprite;
+            inventoryItemImage.enabled = true;
+        }
+        for (int i = items.Count; i < _inventoryTransforms.Count; i++)
+        {
+            _inventoryTransforms[i].GetComponent<Image>().enabled = false;
+        }
     }
 
     private void ShowInventory()
@@ -90,7 +76,5 @@ public class InventoryVisualizer
             _inventoryTransformsParent.SetActive(true);
         }
     }
-
-
 
 }

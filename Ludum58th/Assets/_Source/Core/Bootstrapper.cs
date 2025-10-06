@@ -20,6 +20,8 @@ public class Bootstrapper : MonoBehaviour
         CursorTrack cursorTrack = new();
         ResourceLoader loader = new();
 
+        //fddd
+
         ItemFabric itemFabric = new(itemPrefab,
                                     itemRoots);
 

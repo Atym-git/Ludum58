@@ -12,7 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 379fd36feb28baa468046de9e6191256, type: 3}
   m_Name: malenkiyStolSO16
   m_EditorClassIdentifier: 
-  <ItemSprite>k__BackingField: {fileID: 10915, guid: 0000000000000000f000000000000000, type: 0}
+  <ItemSprite>k__BackingField: {fileID: -1948113687104694533, guid: aabb59f7c68afc145856793e0737d95b, type: 3}
+  <ItemPrefab>k__BackingField: {fileID: 1848877050416615714, guid: e7cc37ef4f683d345bb8f0f4b61f08d3, type: 3}
   <ItemNotificationText>k__BackingField: 'We often sat in the kitchen together.:
     Olya cooked, and Lena painted... There were even pencil marks on the table.'
   <ItemNotificationDuration>k__BackingField: 5

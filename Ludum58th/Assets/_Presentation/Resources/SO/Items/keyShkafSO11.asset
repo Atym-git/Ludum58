@@ -12,7 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 379fd36feb28baa468046de9e6191256, type: 3}
   m_Name: keyShkafSO11
   m_EditorClassIdentifier: 
-  <ItemSprite>k__BackingField: {fileID: -2781120286420507802, guid: 7276f8b06391667479f7d57e9ae5d3eb, type: 3}
+  <ItemSprite>k__BackingField: {fileID: -3048066783205267695, guid: 99df0b5215712aa4d9569475e6510c92, type: 3}
+  <ItemPrefab>k__BackingField: {fileID: 3386890950696557860, guid: ae5b3bee5742b4544a623e8e0357f77b, type: 3}
   <ItemNotificationText>k__BackingField: It looks like a key to some furniture...
     Just from which one?
   <ItemNotificationDuration>k__BackingField: 5

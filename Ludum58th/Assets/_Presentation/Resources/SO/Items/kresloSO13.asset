@@ -12,7 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 379fd36feb28baa468046de9e6191256, type: 3}
   m_Name: kresloSO13
   m_EditorClassIdentifier: 
-  <ItemSprite>k__BackingField: {fileID: 10915, guid: 0000000000000000f000000000000000, type: 0}
+  <ItemSprite>k__BackingField: {fileID: 6105894699606738013, guid: 47ffa88512511ed4bb4f58eb59f5f6d9, type: 3}
+  <ItemPrefab>k__BackingField: {fileID: 6538399494171437772, guid: 8e2258fa8ae8f4b4486baf3881f761d8, type: 3}
   <ItemNotificationText>k__BackingField: When Lena was very young, she sat on my
     lap in this chair. In the evenings, we read her favorite fairy tales and drank
     tea with honey.
