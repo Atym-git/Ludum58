@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 379fd36feb28baa468046de9e6191256, type: 3}
+  m_Name: pic4SO21
+  m_EditorClassIdentifier: 
+  <ItemSprite>k__BackingField: {fileID: 110772055705746150, guid: babedb35cc412e642b822c760acb8cb7, type: 3}
+  <ItemPrefab>k__BackingField: {fileID: 8596283772843718913, guid: b5d8a040cf230a54990d9477054b3c78, type: 3}
+  <ItemNotificationText>k__BackingField: My parents sent this photo when we bought
+    this apartment and started to renovate it. They said, "So that you don't forget
+    to take your granddaughter to our seaside."
+  <ItemNotificationDuration>k__BackingField: 5
+  <ItemIconDisplayDuration>k__BackingField: 0
+  <CouldBeInInventory>k__BackingField: 0

@@ -7,18 +7,20 @@ public class Item : MonoBehaviour
 {
     private const string INVENTORY_NOTIFICATION_TMP_TAG = "InventoryNotificationTMP";
 
-    [field:SerializeField]
-    public Sprite ItemSprite {  get; private set; }
+    [field: SerializeField]
+    public Sprite ItemSprite { get; private set; }
+
+    private GameObject _itemPrefab;
 
     [SerializeField] private string _itemNotifText;
 
-    [field:SerializeField]
+    [field: SerializeField]
     public float NotificationDuration { get; private set; }
 
     private float _itemIconDisplayDuration;
 
     private bool _couldBeInInventory;
-    
+
     public TextMeshProUGUI InventoryNotifTMP;
 
     [SerializeField] private CoroutineRunner _coroutineRunner;
@@ -28,29 +30,38 @@ public class Item : MonoBehaviour
                           float itemNotifDuration,
                           float itemIconDisplayDuration,
                           bool couldBeInInventory,
+                          GameObject itemPrefab,
                           CoroutineRunner coroutineRunner)
     {
         ItemSprite = itemSprite;
         _itemNotifText = itemNotifText;
         NotificationDuration = itemNotifDuration;
         _couldBeInInventory = couldBeInInventory;
+        _itemPrefab = itemPrefab;
         _coroutineRunner = coroutineRunner;
 
         GetComponent<SpriteRenderer>().sprite = itemSprite;
     }
 
-    public void OnMouseDown()
-    {
-        OnClick();
-    }
+    //public void OnMouseDown()
+    //{
+    //    OnClick();
+    //}
 
     private void Start()
     {
         InventoryNotifTMP = GameObject.FindGameObjectWithTag(INVENTORY_NOTIFICATION_TMP_TAG)
             .GetComponent<TextMeshProUGUI>();
+
+        if (_itemPrefab != null)
+        {
+            GameObject itemInstance3D = Instantiate(_itemPrefab, transform);
+            itemInstance3D.SetActive(true);
+        }
+
     }
 
-    private void OnClick()
+    public void OnClick()
     {
         Item item = gameObject.GetComponent<Item>();
         if (_couldBeInInventory)
@@ -79,4 +90,5 @@ public class Item : MonoBehaviour
         yield return new WaitForSeconds(seconds);
         inventoryNotifGO.SetActive(false);
     }
+
 }

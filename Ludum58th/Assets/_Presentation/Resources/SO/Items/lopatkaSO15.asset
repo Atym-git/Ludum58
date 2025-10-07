@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 379fd36feb28baa468046de9e6191256, type: 3}
+  m_Name: lopatkaSO15
+  m_EditorClassIdentifier: 
+  <ItemSprite>k__BackingField: {fileID: -5572782968142627688, guid: 3d8911d59d2b3a14b8f23f6e930c9e41, type: 3}
+  <ItemPrefab>k__BackingField: {fileID: 7613125309581920968, guid: 0dc86ab6cce006b42a2e56d749b56a83, type: 3}
+  <ItemNotificationText>k__BackingField: It seems that Lenochka hasn't used it for
+    a long time... I'm too old to play in the sandbox.
+  <ItemNotificationDuration>k__BackingField: 5
+  <ItemIconDisplayDuration>k__BackingField: 0
+  <CouldBeInInventory>k__BackingField: 1

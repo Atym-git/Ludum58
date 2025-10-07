@@ -6,6 +6,9 @@ public class ItemSO : ScriptableObject
 {
     [field: SerializeField]
     public Sprite ItemSprite { get; private set; }
+    
+    [field: SerializeField]
+    public GameObject ItemPrefab { get; private set; }
 
     [field: SerializeField]
     public string ItemNotificationText { get; private set; }

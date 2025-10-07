@@ -52,6 +52,15 @@ public class DragAndDrop : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndD
     {
         transform.SetParent(_parentAfterDrag);
         _image.raycastTarget = true;
+        Ray ray = Camera.main.ScreenPointToRay(eventData.position);
+        if (Physics.Raycast(ray, out RaycastHit hitInfo))
+        {
+            if (hitInfo.collider.TryGetComponent(out Slot slot))
+            {
+                slot.OnItemDrop();
+            }
+        }
         DraggableContainer.DraggableItem = null;
     }
+
 }

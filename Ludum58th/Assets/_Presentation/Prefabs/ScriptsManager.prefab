@@ -169,15 +169,8 @@ MonoBehaviour:
   inputListener: {fileID: 4091220434465653849}
   playerData: {fileID: 0}
   runner: {fileID: 4673803079070597029}
-  dragAndDrops:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  slots: []
   teleportRootsParent: {fileID: 0}
-  dragNDropParent: {fileID: 0}
   itemPrefab: {fileID: 838596881569097549, guid: 07dfcefa3d03d8b44bb86710b92125c3, type: 3}
   itemRoots:
   - {fileID: 0}

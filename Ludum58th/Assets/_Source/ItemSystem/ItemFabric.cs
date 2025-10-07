@@ -16,7 +16,10 @@ public class ItemFabric
     {
         for (int i = 0; i < itemSOs.Length; i++)
         {
-            if (_itemRoots[i] != null)
+            //Debug.Log("_itemRoots.Count" + _itemRoots.Count);
+            //Debug.Log("itemSOs.Length" + itemSOs.Length);
+            //Debug.Log("_itemRoots[i] " + _itemRoots[i] + " Index : " + i);
+            if (i < _itemRoots.Count)
             {
                 GameObject itemGO = Object.Instantiate(_itemPrefab, _itemRoots[i]);
                 Item item = itemGO.GetComponent<Item>();
@@ -27,6 +30,7 @@ public class ItemFabric
                                itemSO.ItemNotificationDuration,
                                itemSO.ItemIconDisplayDuration,
                                itemSO.CouldBeInInventory,
+                               itemSO.ItemPrefab,
                                coroutineRunner);
 
             }

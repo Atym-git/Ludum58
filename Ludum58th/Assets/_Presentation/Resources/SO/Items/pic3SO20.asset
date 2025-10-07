@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 379fd36feb28baa468046de9e6191256, type: 3}
+  m_Name: pic3SO20
+  m_EditorClassIdentifier: 
+  <ItemSprite>k__BackingField: {fileID: -1065807777586536066, guid: cc9e5e1dfab31124fa0d47629ef9c585, type: 3}
+  <ItemPrefab>k__BackingField: {fileID: 8202132209500208555, guid: 447e181d4bbe0d64f83a89cc105a9636, type: 3}
+  <ItemNotificationText>k__BackingField: Olya called it the "Tree of Knowledge."
+    I remember when she was still at the institute, she was fond of painting and
+    sometimes wrote stories from books...
+  <ItemNotificationDuration>k__BackingField: 5
+  <ItemIconDisplayDuration>k__BackingField: 0
+  <CouldBeInInventory>k__BackingField: 0

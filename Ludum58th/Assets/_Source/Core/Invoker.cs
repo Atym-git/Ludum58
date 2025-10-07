@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 public class Invoker
@@ -11,8 +12,6 @@ public class Invoker
     private CoroutineRunner _coroutineRunner;
 
     private static Transition _transition;
-
-    //private LayerMask _itemLayerMask;
 
     public Invoker(PlayerMovement playerMovement,
                    PlayerData playerData,
@@ -40,12 +39,13 @@ public class Invoker
     {
         _playerMovement.Move(vertMoveF,
                              _playerData.PlayerSpeed,
-                             _playerData.PlayerRb);
+                             _playerData.PlayerRb, 
+                             _playerData.CharacterTransform);
     }
 
     public void InvokeCursorTrack()
     {
-        _cursorTrack.TrackOnClick(Camera.main/*, _itemLayerMask*/);
+        _cursorTrack.TrackOnClick(Camera.main);
     }
 
     public void InvokeItemsSpawn()
@@ -57,18 +57,17 @@ public class Invoker
     public void InvokeShowInv(Item item, int itemIndex)
     {
         _inventoryVisualizer.ShowItems(item,
-                                       itemIndex,
-                                       item.InventoryNotifTMP,
-                                       item.NotificationDuration);
+                                       itemIndex);
     }
 
-    public void InvokeStopShowingInv(int rootIndex)
+    public void InvokeItemsRemap(List<Item> items)
     {
-        _inventoryVisualizer.StopShowingItems(rootIndex);
+        _inventoryVisualizer.RemapItemsPlaces(items);
     }
 
     public static void InvokeTeleportTo(Transform teleportToTransform)
     {
         _transition.TeleportTo(_playerData.transform, teleportToTransform, _playerData.BlackScreen);
     }
+
 }

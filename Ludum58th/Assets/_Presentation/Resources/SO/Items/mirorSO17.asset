@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 379fd36feb28baa468046de9e6191256, type: 3}
+  m_Name: mirorSO17
+  m_EditorClassIdentifier: 
+  <ItemSprite>k__BackingField: {fileID: -4233866548200529636, guid: 8b6d8c2e1f932664ca2aa75ed2847026, type: 3}
+  <ItemPrefab>k__BackingField: {fileID: 880568641295246794, guid: 957067c0e5279ff4fb5b5f3fd1717b4c, type: 3}
+  <ItemNotificationText>k__BackingField: Is this how I look now..? Olya would tell
+    me if she saw what I've turned myself into..
+  <ItemNotificationDuration>k__BackingField: 5
+  <ItemIconDisplayDuration>k__BackingField: 0
+  <CouldBeInInventory>k__BackingField: 0
