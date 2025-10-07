@@ -1,7 +1,6 @@
 using TMPro;
 using UnityEngine;
 using System.Collections;
-using Unity.VisualScripting;
 
 public class Item : MonoBehaviour
 {
@@ -21,7 +20,9 @@ public class Item : MonoBehaviour
 
     private bool _couldBeInInventory;
 
-    public TextMeshProUGUI InventoryNotifTMP;
+    private GameObject _inventoryNotifPanel;
+
+    private TextMeshProUGUI _inventoryNotifTMP;
 
     [SerializeField] private CoroutineRunner _coroutineRunner;
 
@@ -31,6 +32,7 @@ public class Item : MonoBehaviour
                           float itemIconDisplayDuration,
                           bool couldBeInInventory,
                           GameObject itemPrefab,
+                          GameObject inventoryNotifPanel,
                           CoroutineRunner coroutineRunner)
     {
         ItemSprite = itemSprite;
@@ -38,6 +40,7 @@ public class Item : MonoBehaviour
         NotificationDuration = itemNotifDuration;
         _couldBeInInventory = couldBeInInventory;
         _itemPrefab = itemPrefab;
+        _inventoryNotifPanel = inventoryNotifPanel;
         _coroutineRunner = coroutineRunner;
 
         GetComponent<SpriteRenderer>().sprite = itemSprite;
@@ -50,13 +53,25 @@ public class Item : MonoBehaviour
 
     private void Start()
     {
-        InventoryNotifTMP = GameObject.FindGameObjectWithTag(INVENTORY_NOTIFICATION_TMP_TAG)
-            .GetComponent<TextMeshProUGUI>();
+        //InventoryNotifTMP = GameObject.FindGameObjectWithTag(INVENTORY_NOTIFICATION_TMP_TAG)
+        //    .GetComponent<TextMeshProUGUI>();
 
         if (_itemPrefab != null)
         {
             GameObject itemInstance3D = Instantiate(_itemPrefab, transform);
             itemInstance3D.SetActive(true);
+        }
+
+        if (_inventoryNotifPanel != null)
+        {
+            for (int i = 0; i < _inventoryNotifPanel.transform.childCount; i++)
+            {
+                Transform panelChild = _inventoryNotifPanel.transform.GetChild(i);
+                if (panelChild.TryGetComponent(out TextMeshProUGUI invNotifTMP))
+                {
+                    _inventoryNotifTMP = invNotifTMP;
+                }
+            }
         }
 
     }
@@ -70,14 +85,10 @@ public class Item : MonoBehaviour
             //Item itemClone = itemCloneGO.GetComponent<Item>();
             Inventory.AddItem(item);
         }
-        else
-        {
-            SelfDestruct();
-        }
 
-        InventoryNotifTMP.text = item._itemNotifText;
+        _inventoryNotifTMP.text = item._itemNotifText;
 
-        _coroutineRunner.RunCoroutine(NotifyDuration(NotificationDuration, InventoryNotifTMP.gameObject));
+        _coroutineRunner.RunCoroutine(NotifyDuration(NotificationDuration, _inventoryNotifPanel));
     }
 
     public void SelfDestruct() => Destroy(gameObject);

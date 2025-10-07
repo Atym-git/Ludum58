@@ -5,8 +5,10 @@ using UnityEngine.InputSystem;
 public class InputListener : MonoBehaviour
 {
     private MainInputSystem _mainInputSystem;
+
     private InputAction _movement;
     private InputAction _click;
+    private InputAction _interact;
 
     private Invoker _invoker;
 
@@ -33,13 +35,23 @@ public class InputListener : MonoBehaviour
         _movement.Enable();
 
         _click = _mainInputSystem.UI.Click;
-        _mainInputSystem.UI.Click.performed += OnClick;
+        _click.performed += OnClick;
         _click.Enable();
+
+        _interact = _mainInputSystem.Player.Interact;
+        _interact.performed += Interact;
+        _interact.Enable();
+    }
+
+    private void Interact(InputAction.CallbackContext context)
+    {
+        _invoker.InvokePhotoDisplay();
     }
 
     private void OnClick(InputAction.CallbackContext context)
     {
         _invoker.InvokeCursorTrack();
+        _invoker.InvokePlaySFXClip(transform);
     }
 
     private void Movement()
@@ -52,5 +64,6 @@ public class InputListener : MonoBehaviour
     {
         _movement.Disable();
         _click.Disable();
+        _interact.Disable();
     }
 }

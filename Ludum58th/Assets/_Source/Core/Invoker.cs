@@ -10,6 +10,8 @@ public class Invoker
     private ItemFabric _itemFabric;
     private ResourceLoader _resourceLoader;
     private CoroutineRunner _coroutineRunner;
+    private PhotoDisplay _photoDisplay;
+    private SFXPlayer _sFXPlayer;
 
     private static Transition _transition;
 
@@ -20,7 +22,9 @@ public class Invoker
                    Transition transition,
                    ItemFabric itemFabric,
                    ResourceLoader resourceLoader,
-                   CoroutineRunner coroutineRunner)
+                   CoroutineRunner coroutineRunner,
+                   PhotoDisplay photoDisplay,
+                   SFXPlayer sFXPlayer)
     {
         _playerMovement = playerMovement;
         _playerData = playerData;
@@ -29,8 +33,9 @@ public class Invoker
         _itemFabric = itemFabric;
         _resourceLoader = resourceLoader;
         _coroutineRunner = coroutineRunner;
-
         _transition = transition;
+        _photoDisplay = photoDisplay;
+        _sFXPlayer = sFXPlayer;
 
         InvokeItemsSpawn();
     }
@@ -68,6 +73,16 @@ public class Invoker
     public static void InvokeTeleportTo(Transform teleportToTransform)
     {
         _transition.TeleportTo(_playerData.transform, teleportToTransform, _playerData.BlackScreen);
+    }
+
+    public void InvokePhotoDisplay()
+    {
+        _photoDisplay.ShowPhoto();
+    }
+
+    public void InvokePlaySFXClip(Transform spawnedGOTransform)
+    {
+        _sFXPlayer.PlaySoundFXClip(_playerData.clickAudioClip, spawnedGOTransform, 0.25f);
     }
 
 }
