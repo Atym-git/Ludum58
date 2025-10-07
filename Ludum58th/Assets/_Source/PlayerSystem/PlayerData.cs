@@ -16,19 +16,16 @@ public class PlayerData : MonoBehaviour
     [field:SerializeField]
     public Transform CharacterTransform { get; private set; }
 
-    //[field:Header("Inventory Data")]
-
-    //[field:SerializeField]
-    //public float NotificationDuration { get; private set; }
-
     [field: SerializeField]
     public Transform InventoryIconsParent { get; private set; }
-
-    //[field:SerializeField]
-    //public TextMeshProUGUI InventoryNotifTMP { get; private set; }
 
     [field:Header("Black Screen")]
 
     [field: SerializeField]
     public GameObject BlackScreen { get; private set; }
+
+    [field: Header("Audio Clips")]
+
+    [field: SerializeField]
+    public AudioClip clickAudioClip { get; private set; }
 }

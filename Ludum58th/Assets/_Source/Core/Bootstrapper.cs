@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class Bootstrapper : MonoBehaviour
@@ -6,12 +7,17 @@ public class Bootstrapper : MonoBehaviour
     [SerializeField] private InputListener inputListener;
     [SerializeField] private PlayerData playerData;
     [SerializeField] private CoroutineRunner runner;
+
     [SerializeField] private List<Slot> slots = new();
+
+    [SerializeField] private GameObject photo;
+
+    [SerializeField] private AudioSource sFXPlayerPrefab;
 
     [field:Header("Item Data")]
     [SerializeField] private GameObject itemPrefab;
     [SerializeField] private List<Transform> itemRoots = new();
-    //[SerializeField] private LayerMask itemLayerMask;
+    [SerializeField] private GameObject inventoryNotifPanel;
 
     private void Awake()
     {
@@ -19,22 +25,29 @@ public class Bootstrapper : MonoBehaviour
         CursorTrack cursorTrack = new();
         ResourceLoader loader = new();
 
-        ItemFabric itemFabric = new(itemPrefab,
-                                    itemRoots);
+        PhotoDisplay photoDisplay = new PhotoDisplay(photo);
+
+        SFXPlayer sFXPlayer = new SFXPlayer(sFXPlayerPrefab);
+
+        ItemFabric itemFabric = new ItemFabric(itemPrefab,
+                                               itemRoots,
+                                               inventoryNotifPanel);
 
         Transition transition = new Transition(runner);
 
         InventoryVisualizer inventoryVisualizer = new InventoryVisualizer(playerData.InventoryIconsParent,
                                                                           runner);
 
-        Invoker invoker = new(playerMovement,
-                              playerData,
-                              cursorTrack,
-                              inventoryVisualizer,
-                              transition,
-                              itemFabric,
-                              loader,
-                              runner);
+        Invoker invoker = new Invoker(playerMovement,
+                                      playerData,
+                                      cursorTrack,
+                                      inventoryVisualizer,
+                                      transition,
+                                      itemFabric,
+                                      loader,
+                                      runner,
+                                      photoDisplay,
+                                      sFXPlayer);
 
         Inventory inventory = new Inventory(invoker);
 

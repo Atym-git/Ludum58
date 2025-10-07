@@ -6,19 +6,19 @@ public class ItemFabric
     private GameObject _itemPrefab;
     private List<Transform> _itemRoots;
 
-    public ItemFabric(GameObject itemPrefab, List<Transform> itemRoots)
+    private GameObject _inventoryNotifPanel;
+
+    public ItemFabric(GameObject itemPrefab, List<Transform> itemRoots, GameObject inventoryNotifPanel)
     {
         _itemPrefab = itemPrefab;
         _itemRoots = itemRoots;
+        _inventoryNotifPanel = inventoryNotifPanel;
     }
 
     public void InstantiateItems(ItemSO[] itemSOs, CoroutineRunner coroutineRunner)
     {
         for (int i = 0; i < itemSOs.Length; i++)
         {
-            //Debug.Log("_itemRoots.Count" + _itemRoots.Count);
-            //Debug.Log("itemSOs.Length" + itemSOs.Length);
-            //Debug.Log("_itemRoots[i] " + _itemRoots[i] + " Index : " + i);
             if (i < _itemRoots.Count)
             {
                 GameObject itemGO = Object.Instantiate(_itemPrefab, _itemRoots[i]);
@@ -31,6 +31,7 @@ public class ItemFabric
                                itemSO.ItemIconDisplayDuration,
                                itemSO.CouldBeInInventory,
                                itemSO.ItemPrefab,
+                               _inventoryNotifPanel,
                                coroutineRunner);
 
             }
