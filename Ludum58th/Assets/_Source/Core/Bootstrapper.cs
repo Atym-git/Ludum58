@@ -8,11 +8,10 @@ public class Bootstrapper : MonoBehaviour
     [SerializeField] private CoroutineRunner runner;
     [SerializeField] private List<Slot> slots = new();
 
-    [SerializeField] private Transform teleportRootsParent;
-
     [field:Header("Item Data")]
     [SerializeField] private GameObject itemPrefab;
     [SerializeField] private List<Transform> itemRoots = new();
+    //[SerializeField] private LayerMask itemLayerMask;
 
     private void Awake()
     {
@@ -20,12 +19,10 @@ public class Bootstrapper : MonoBehaviour
         CursorTrack cursorTrack = new();
         ResourceLoader loader = new();
 
-        //fddd
-
         ItemFabric itemFabric = new(itemPrefab,
                                     itemRoots);
 
-        Transition transition = new Transition(teleportRootsParent, runner);
+        Transition transition = new Transition(runner);
 
         InventoryVisualizer inventoryVisualizer = new InventoryVisualizer(playerData.InventoryIconsParent,
                                                                           runner);

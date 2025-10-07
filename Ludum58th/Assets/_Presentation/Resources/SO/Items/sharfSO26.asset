@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: sharfSO26
   m_EditorClassIdentifier: 
   <ItemSprite>k__BackingField: {fileID: 5419526334970447551, guid: 8503ac050ffade2459d776ea03ab22fb, type: 3}
+  <ItemPrefab>k__BackingField: {fileID: 7653409501708637131, guid: 40a10c04f78be3541996c578fb9d76c9, type: 3}
   <ItemNotificationText>k__BackingField: 
   <ItemNotificationDuration>k__BackingField: 5
   <ItemIconDisplayDuration>k__BackingField: 0

@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: vazaSO37
   m_EditorClassIdentifier: 
   <ItemSprite>k__BackingField: {fileID: 2754658573488812652, guid: e0a5714f2a8d2a94f8aed3ff21113a4b, type: 3}
+  <ItemPrefab>k__BackingField: {fileID: 7999070770504294261, guid: 2b69917daca231f4dbf242eb9ee712f9, type: 3}
   <ItemNotificationText>k__BackingField: This vase is very similar to the one that
     Olya and I bought at the same flea market... We wanted to plant a tree in it,
     just like in her painting. It is better to get this plant out of it... She was

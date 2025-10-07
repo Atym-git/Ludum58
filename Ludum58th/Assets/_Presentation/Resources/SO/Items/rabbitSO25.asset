@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: rabbitSO25
   m_EditorClassIdentifier: 
   <ItemSprite>k__BackingField: {fileID: 7211630969972830702, guid: f6a0f6e66a284ef43aa54730db6c7a97, type: 3}
+  <ItemPrefab>k__BackingField: {fileID: 8960436643538292964, guid: 28d1d398bf2774342984e6421e8ab606, type: 3}
   <ItemNotificationText>k__BackingField: Her grandmother gave her this rabbit for
     5 years.
   <ItemNotificationDuration>k__BackingField: 5

@@ -11,11 +11,9 @@ public class Transition
 
     private CoroutineRunner _runner;
 
-    public Transition(Transform teleportRootsParent, CoroutineRunner coroutineRunner)
+    public Transition(CoroutineRunner coroutineRunner)
     {
         _runner = coroutineRunner;
-
-        //GetTransformsFromParent(teleportRootsParent);
     }
 
     private void GetTransformsFromParent(Transform rootsParent)

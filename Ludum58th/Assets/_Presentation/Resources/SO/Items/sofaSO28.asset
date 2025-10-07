@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: sofaSO28
   m_EditorClassIdentifier: 
   <ItemSprite>k__BackingField: {fileID: 10915, guid: 0000000000000000f000000000000000, type: 0}
+  <ItemPrefab>k__BackingField: {fileID: 230885322503886466, guid: 7e8efe277c3e5694b930ba1c6b034ff9, type: 3}
   <ItemNotificationText>k__BackingField: My parents had the same one, it always reminded
     me of their home and my childhood.
   <ItemNotificationDuration>k__BackingField: 5

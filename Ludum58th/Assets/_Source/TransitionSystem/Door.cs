@@ -4,7 +4,7 @@ public class Door : MonoBehaviour
 {
     [SerializeField] private Transform teleportToTransform;
 
-    private void OnMouseDown()
+    public void OnClick()
     {
         Invoker.InvokeTeleportTo(teleportToTransform);
     }

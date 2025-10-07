@@ -43,10 +43,10 @@ public class Item : MonoBehaviour
         GetComponent<SpriteRenderer>().sprite = itemSprite;
     }
 
-    public void OnMouseDown()
-    {
-        OnClick();
-    }
+    //public void OnMouseDown()
+    //{
+    //    OnClick();
+    //}
 
     private void Start()
     {
@@ -55,12 +55,13 @@ public class Item : MonoBehaviour
 
         if (_itemPrefab != null)
         {
-            Instantiate(_itemPrefab, transform);
+            GameObject itemInstance3D = Instantiate(_itemPrefab, transform);
+            itemInstance3D.SetActive(true);
         }
 
     }
 
-    private void OnClick()
+    public void OnClick()
     {
         Item item = gameObject.GetComponent<Item>();
         if (_couldBeInInventory)

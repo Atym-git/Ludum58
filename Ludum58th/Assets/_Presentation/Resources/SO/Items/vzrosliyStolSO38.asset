@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: vzrosliyStolSO38
   m_EditorClassIdentifier: 
   <ItemSprite>k__BackingField: {fileID: 10915, guid: 0000000000000000f000000000000000, type: 0}
+  <ItemPrefab>k__BackingField: {fileID: 9184029430057693821, guid: 9ee0b0c65c56e564e95e76d683bb1bb8, type: 3}
   <ItemNotificationText>k__BackingField: Sometimes I worked on it on weekends, although
     mostly it always served as a repository for letters from distant relatives.
   <ItemNotificationDuration>k__BackingField: 5
