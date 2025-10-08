@@ -368,11 +368,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 027c5486c49836344bd9d78d8e3cf929, type: 3}
---- !u!4 &102993246 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 784114358194873515, guid: 027c5486c49836344bd9d78d8e3cf929, type: 3}
-  m_PrefabInstance: {fileID: 102993245}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &241367819 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 9038956877218219135, guid: 968074b44393c4742bfa979deee4e483, type: 3}
@@ -2970,23 +2965,23 @@ PrefabInstance:
     - target: {fileID: 777726736708116935, guid: eb066b2f124263f478672cba66297b6b, type: 3}
       propertyPath: 'itemRoots.Array.data[34]'
       value: 
-      objectReference: {fileID: 102993246}
+      objectReference: {fileID: 18234922}
     - target: {fileID: 777726736708116935, guid: eb066b2f124263f478672cba66297b6b, type: 3}
       propertyPath: 'itemRoots.Array.data[35]'
       value: 
-      objectReference: {fileID: 18234922}
+      objectReference: {fileID: 18234921}
     - target: {fileID: 777726736708116935, guid: eb066b2f124263f478672cba66297b6b, type: 3}
       propertyPath: 'itemRoots.Array.data[36]'
       value: 
-      objectReference: {fileID: 18234921}
+      objectReference: {fileID: 1490532871}
     - target: {fileID: 777726736708116935, guid: eb066b2f124263f478672cba66297b6b, type: 3}
       propertyPath: 'itemRoots.Array.data[37]'
       value: 
-      objectReference: {fileID: 1490532871}
+      objectReference: {fileID: 578798796}
     - target: {fileID: 777726736708116935, guid: eb066b2f124263f478672cba66297b6b, type: 3}
       propertyPath: 'itemRoots.Array.data[38]'
       value: 
-      objectReference: {fileID: 578798796}
+      objectReference: {fileID: 1490532870}
     - target: {fileID: 777726736708116935, guid: eb066b2f124263f478672cba66297b6b, type: 3}
       propertyPath: 'itemRoots.Array.data[39]'
       value: 
