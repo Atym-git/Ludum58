@@ -23,11 +23,9 @@ public class Inventory
     {
         if (item != null)
         {
-            Debug.Log("Before removing Items Count: " + _items.Count);
             int index = _items.IndexOf(item);
             _items.Remove(item);
             _invoker.InvokeItemsRemap(_items);
-            Debug.Log("After removing Items Count: " + _items.Count);
 
         }
     }

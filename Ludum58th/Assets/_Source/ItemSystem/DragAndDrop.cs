@@ -17,13 +17,6 @@ public class DragAndDrop : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndD
 
     private Canvas canvas;
 
-    //private DraggableContainer _draggableContainer;
-
-    //public void Construct(DraggableContainer draggableContainer)
-    //{
-    //    _draggableContainer = draggableContainer;
-    //}
-
     private void Start()
     {
         parentPanelRT = GameObject.FindGameObjectWithTag(ITEMS_PARENT_PANEL_TAG)

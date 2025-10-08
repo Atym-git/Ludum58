@@ -11,13 +11,10 @@ public class Slot : MonoBehaviour/*, IDropHandler*/
     [SerializeField] private List<Transform> requiredItemsParents = new();
     [SerializeField] private List<Item> requiredItems = new();
 
-    //private DraggableContainer _draggableContainer;
     private Inventory _inventory;
 
     private int _maxRequiredItemIndex = 0;
     private int _currRequiredItemIndex = 0;
-
-    //[SerializeField] private Sprite _spriteAfterUsingItem;
 
     [field:Header("Item after all items were gotten")]
 
@@ -42,9 +39,8 @@ public class Slot : MonoBehaviour/*, IDropHandler*/
     [field:SerializeField] public bool IsPartDone { get; private set; }
     [SerializeField] private int _itemsDone = 0;
 
-    public void Construct(/*DraggableContainer container,*/ Inventory inventory)
+    public void Construct(Inventory inventory)
     {
-        //_draggableContainer = container;
         _inventory = inventory;
     }
 
@@ -139,10 +135,6 @@ public class Slot : MonoBehaviour/*, IDropHandler*/
                     }
                 }
                 _currRequiredItemIndex++;
-                //if (_spriteAfterUsingItem != null)
-                //{
-                //    GetComponent<SpriteRenderer>().sprite = _spriteAfterUsingItem;
-                //}
             }
             _draggableItem = null;
             if (transform.TryGetComponent(out _boxCollider))
