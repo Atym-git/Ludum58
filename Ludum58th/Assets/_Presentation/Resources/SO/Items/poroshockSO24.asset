@@ -12,10 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 379fd36feb28baa468046de9e6191256, type: 3}
   m_Name: poroshockSO24
   m_EditorClassIdentifier: 
-  <ItemSprite>k__BackingField: {fileID: 7581996607698189666, guid: 38ace652b3d3f454c8d330a7dc4b476d, type: 3}
+  <ItemSprite>k__BackingField: {fileID: 21300000, guid: 38ace652b3d3f454c8d330a7dc4b476d, type: 3}
   <ItemPrefab>k__BackingField: {fileID: 5085585849761172855, guid: f0c25067cb202ac4cad0447583ca872f, type: 3}
   <ItemNotificationText>k__BackingField: It's a good powder. He even washed Lenin's
     baby diapers.
   <ItemNotificationDuration>k__BackingField: 5
   <ItemIconDisplayDuration>k__BackingField: 0
+  <MoveTowardsXAfterPress>k__BackingField: 0
   <CouldBeInInventory>k__BackingField: 1

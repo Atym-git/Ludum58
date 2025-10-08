@@ -12,9 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 379fd36feb28baa468046de9e6191256, type: 3}
   m_Name: ZnitkiSO41
   m_EditorClassIdentifier: 
-  <ItemSprite>k__BackingField: {fileID: -5128144039022295133, guid: 2be30c138b531914d9ec07a4a69a925d, type: 3}
+  <ItemSprite>k__BackingField: {fileID: 21300000, guid: 2be30c138b531914d9ec07a4a69a925d, type: 3}
+  <ItemPrefab>k__BackingField: {fileID: 0}
   <ItemNotificationText>k__BackingField: Olga always carried such a set with her..
     Prudently, I think I should adopt this habit.
   <ItemNotificationDuration>k__BackingField: 5
   <ItemIconDisplayDuration>k__BackingField: 0
+  <MoveTowardsXAfterPress>k__BackingField: 0
   <CouldBeInInventory>k__BackingField: 1

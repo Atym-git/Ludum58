@@ -12,11 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 379fd36feb28baa468046de9e6191256, type: 3}
   m_Name: hatSO9
   m_EditorClassIdentifier: 
-  <ItemSprite>k__BackingField: {fileID: -1836120431684336037, guid: 7dced519ffdb4c24a852d10c55391a72, type: 3}
+  <ItemSprite>k__BackingField: {fileID: 21300000, guid: 3da2cbae2109fbf4c8fe844af560f6cc, type: 3}
   <ItemPrefab>k__BackingField: {fileID: 8819709805029637657, guid: 82e431db7acb0ec46b0eeb2f333574fc, type: 3}
   <ItemNotificationText>k__BackingField: Ridiculous hat... Olga bought it when we
     were on a family vacation... to me... She managed to get me to wear it... Her
     smile was worth it, though...
   <ItemNotificationDuration>k__BackingField: 5
   <ItemIconDisplayDuration>k__BackingField: 0
+  <MoveTowardsXAfterPress>k__BackingField: 0
   <CouldBeInInventory>k__BackingField: 1
