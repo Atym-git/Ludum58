@@ -12,10 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 379fd36feb28baa468046de9e6191256, type: 3}
   m_Name: rabbitSO25
   m_EditorClassIdentifier: 
-  <ItemSprite>k__BackingField: {fileID: 7211630969972830702, guid: f6a0f6e66a284ef43aa54730db6c7a97, type: 3}
+  <ItemSprite>k__BackingField: {fileID: 21300000, guid: f6a0f6e66a284ef43aa54730db6c7a97, type: 3}
   <ItemPrefab>k__BackingField: {fileID: 8960436643538292964, guid: 28d1d398bf2774342984e6421e8ab606, type: 3}
   <ItemNotificationText>k__BackingField: Her grandmother gave her this rabbit for
     5 years.
   <ItemNotificationDuration>k__BackingField: 5
   <ItemIconDisplayDuration>k__BackingField: 0
+  <MoveTowardsXAfterPress>k__BackingField: 0
   <CouldBeInInventory>k__BackingField: 1

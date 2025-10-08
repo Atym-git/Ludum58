@@ -12,7 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 379fd36feb28baa468046de9e6191256, type: 3}
   m_Name: ZgalstykSO40
   m_EditorClassIdentifier: 
-  <ItemSprite>k__BackingField: {fileID: -1849187617738907995, guid: cf16188229ee8544f84ed5d3c0c5bc78, type: 3}
+  <ItemSprite>k__BackingField: {fileID: 21300000, guid: cf16188229ee8544f84ed5d3c0c5bc78, type: 3}
+  <ItemPrefab>k__BackingField: {fileID: 0}
   <ItemNotificationText>k__BackingField: "\u041C\u043E\u0439 \u0441\u0442\u0430\u0440\u044B\u0439
     \u0433\u0430\u043B\u0441\u0442\u0443\u043A... \u041B\u0435\u043D\u0435 \u043E\u0447\u0435\u043D\u044C
     \u043F\u043E\u043D\u0440\u0430\u0432\u0438\u043B\u043E\u0441\u044C \u0435\u0433\u043E
@@ -21,4 +22,5 @@ MonoBehaviour:
     \u0430\u043A\u043A\u0443\u0440\u0430\u0442\u043D\u044B\u043C"
   <ItemNotificationDuration>k__BackingField: 5
   <ItemIconDisplayDuration>k__BackingField: 0
+  <MoveTowardsXAfterPress>k__BackingField: 0
   <CouldBeInInventory>k__BackingField: 1
