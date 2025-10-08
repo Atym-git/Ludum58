@@ -24,9 +24,10 @@ public class InputListener : MonoBehaviour
         Bind();
     }
 
-    private void FixedUpdate()
+    private void Update()
     {
         Movement();
+        Interact();
     }
 
     private void Bind()
@@ -38,14 +39,18 @@ public class InputListener : MonoBehaviour
         _click.performed += OnClick;
         _click.Enable();
 
-        _interact = _mainInputSystem.Player.Interact;
-        _interact.performed += Interact;
-        _interact.Enable();
+        //_interact = _mainInputSystem.Player.OpenPhoto;
+        //_mainInputSystem.Player.OpenPhoto.performed += Interact;
+        //_interact.Enable();
     }
 
-    private void Interact(InputAction.CallbackContext context)
+    private void Interact()
     {
-        _invoker.InvokePhotoDisplay();
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            _invoker.InvokePhotoDisplay();
+        }
+        
     }
 
     private void OnClick(InputAction.CallbackContext context)
@@ -64,6 +69,6 @@ public class InputListener : MonoBehaviour
     {
         _movement.Disable();
         _click.Disable();
-        _interact.Disable();
+        //_interact.Disable();
     }
 }

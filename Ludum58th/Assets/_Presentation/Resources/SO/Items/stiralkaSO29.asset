@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 379fd36feb28baa468046de9e6191256, type: 3}
   m_Name: stiralkaSO29
   m_EditorClassIdentifier: 
-  <ItemSprite>k__BackingField: {fileID: 10915, guid: 0000000000000000f000000000000000, type: 0}
+  <ItemSprite>k__BackingField: {fileID: 2724330143815183210, guid: 395f3adbfc9f4a949bb1c2f7523ea8bc, type: 3}
   <ItemPrefab>k__BackingField: {fileID: 3267179381786509914, guid: 5ec2d4d13d3cac8479605b19fc7a99ff, type: 3}
   <ItemNotificationText>k__BackingField: This washing machine is older than me, but
     it's still holding up.

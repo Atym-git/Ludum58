@@ -41,6 +41,7 @@ public class DragAndDrop : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndD
         transform.SetParent(parentPanelRT);
         _image.raycastTarget = false;
         DraggableContainer.DraggableItem = gameObject;
+        DraggableContainer.IsDragging = true;
     }
 
     public void OnDrag(PointerEventData eventData)
@@ -61,6 +62,7 @@ public class DragAndDrop : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndD
             }
         }
         DraggableContainer.DraggableItem = null;
+        DraggableContainer.IsDragging = false;
     }
 
 }

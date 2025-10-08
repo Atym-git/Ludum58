@@ -13,7 +13,6 @@ public class PhotoDisplay
 
     public void ShowPhoto()
     {
-        Debug.Log($"Showing photo; PhotoGO = {_photo}; Bool IsPhotoActive = {_isPhotoActive}");
         _isPhotoActive = !_isPhotoActive;
         _photo.SetActive(_isPhotoActive);
     }

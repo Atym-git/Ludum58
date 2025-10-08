@@ -18,4 +18,5 @@ MonoBehaviour:
     which Lena gave me back in first grade... Our family...
   <ItemNotificationDuration>k__BackingField: 5
   <ItemIconDisplayDuration>k__BackingField: 0
+  <MoveTowardsXAfterPress>k__BackingField: 3.5
   <CouldBeInInventory>k__BackingField: 0
