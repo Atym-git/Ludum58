@@ -1,20 +1,25 @@
+using System;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
 [RequireComponent(typeof(BoxCollider))]
 public class Slot : MonoBehaviour/*, IDropHandler*/
 {
+    [field: Header("Required items")]
     [SerializeField] private List<Transform> requiredItemsParents = new();
     [SerializeField] private List<Item> requiredItems = new();
 
-    private DraggableContainer _draggableContainer;
+    //private DraggableContainer _draggableContainer;
     private Inventory _inventory;
 
-    private int _maxItemIndex = 0;
-    private int _currItemIndex = 0;
+    private int _maxRequiredItemIndex = 0;
+    private int _currRequiredItemIndex = 0;
 
-    [SerializeField] private Sprite _spriteAfterUsingItem;
+    //[SerializeField] private Sprite _spriteAfterUsingItem;
+
+    [field:Header("Item after all items were gotten")]
 
     [SerializeField] private Item givingItem;
     [SerializeField] private Transform givingItemParentTransform;
@@ -22,6 +27,20 @@ public class Slot : MonoBehaviour/*, IDropHandler*/
     private GameObject _draggableItem;
 
     private BoxCollider _boxCollider;
+
+    [field: Header("Photo Related")]
+
+    [SerializeField] private bool _isPhotoChanger = false;
+
+    [SerializeField] private GameObject _photoPanel;
+
+    [SerializeField] private Image _photoPartImage;
+    [SerializeField] private Sprite _photoPartDoneSprite;
+
+    [SerializeField] private List<Slot> _slots = new();
+
+    [field:SerializeField] public bool IsPartDone { get; private set; }
+    [SerializeField] private int _itemsDone = 0;
 
     public void Construct(/*DraggableContainer container,*/ Inventory inventory)
     {
@@ -32,8 +51,20 @@ public class Slot : MonoBehaviour/*, IDropHandler*/
     private void Start()
     {
         _boxCollider = GetComponent<BoxCollider>();
-        _maxItemIndex = requiredItemsParents.Count - 1;
+        if (requiredItemsParents.Count > 0)
+        {
+            _maxRequiredItemIndex = requiredItemsParents.Count - 1;
+        }
+        else
+        {
+            _maxRequiredItemIndex = requiredItems.Count - 1;
+        }
+        
         GetItems();
+        if (_isPhotoChanger && _slots.Count == 0)
+        {
+            _slots.Add(this);
+        }
     }
 
     private void GetItems()
@@ -73,29 +104,45 @@ public class Slot : MonoBehaviour/*, IDropHandler*/
         {
             Sprite draggableItemSprite = DraggableContainer.DraggableItem
                 .GetComponent<Image>().sprite;
-            Sprite requiredItemSprite = requiredItems[_currItemIndex]
+            Sprite requiredItemSprite = requiredItems[_currRequiredItemIndex]
                 .GetComponent<SpriteRenderer>().sprite;
 
             if (requiredItemSprite == draggableItemSprite)
             {
-                _inventory.RemoveItem(requiredItems[_currItemIndex]);
-                if (_currItemIndex == _maxItemIndex)
+                _inventory.RemoveItem(requiredItems[_currRequiredItemIndex]);
+                if (_currRequiredItemIndex == _maxRequiredItemIndex)
                 {
-                    if (givingItem.ItemPrefab != null)
+                    if (_isPhotoChanger)
+                    {
+                        IsPartDone = true;
+                        
+                        for (int i = 0; i < _slots.Count; i++)
+                        {
+                            _itemsDone += Convert.ToInt32(_slots[i].IsPartDone);
+                            if (_itemsDone == _slots.Count)
+                            {
+                                _photoPanel.SetActive(true);
+                                ChangePhotoPart(_photoPartImage, _photoPartDoneSprite);
+                                GameObject itemPrefab = transform.GetChild(0).gameObject;
+                                itemPrefab.SetActive(true);
+                            }
+                        }
+                        _itemsDone = 0;
+                    }
+                    else if (givingItem.ItemPrefab != null)
                     {
                         givingItem.CouldBeInventory();
                     }
-                    else
+                    else if (givingItem.ItemPrefab == null)
                     {
                         Inventory.AddItem(givingItem);
                     }
-                    //gameObject.SetActive(false);
                 }
-                _currItemIndex++;
-                if (_spriteAfterUsingItem != null)
-                {
-                    GetComponent<SpriteRenderer>().sprite = _spriteAfterUsingItem;
-                }
+                _currRequiredItemIndex++;
+                //if (_spriteAfterUsingItem != null)
+                //{
+                //    GetComponent<SpriteRenderer>().sprite = _spriteAfterUsingItem;
+                //}
             }
             _draggableItem = null;
             if (transform.TryGetComponent(out _boxCollider))
@@ -107,4 +154,8 @@ public class Slot : MonoBehaviour/*, IDropHandler*/
 
     }
 
+    private void ChangePhotoPart(Image partImage, Sprite photoPartDoneSprite)
+    {
+        partImage.sprite = photoPartDoneSprite;
+    }
 }

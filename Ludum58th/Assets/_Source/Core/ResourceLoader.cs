@@ -8,7 +8,6 @@ public class ResourceLoader
         ItemSO[] itemSOs = Resources.LoadAll("SO/Items", typeof(ItemSO))
             .Cast<ItemSO>()
             .ToArray();
-        //Assets/_Presentation/Resources/SO/Items/ZzakolkaSO42.asset
         return itemSOs;
     }
 }
