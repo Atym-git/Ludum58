@@ -1,8 +1,8 @@
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
+[RequireComponent(typeof(BoxCollider))]
 public class Slot : MonoBehaviour/*, IDropHandler*/
 {
     [SerializeField] private List<Transform> requiredItemsParents = new();
@@ -17,8 +17,11 @@ public class Slot : MonoBehaviour/*, IDropHandler*/
     [SerializeField] private Sprite _spriteAfterUsingItem;
 
     [SerializeField] private Item givingItem;
+    [SerializeField] private Transform givingItemParentTransform;
 
-    private GameObject draggableItem;
+    private GameObject _draggableItem;
+
+    private BoxCollider _boxCollider;
 
     public void Construct(/*DraggableContainer container,*/ Inventory inventory)
     {
@@ -28,27 +31,45 @@ public class Slot : MonoBehaviour/*, IDropHandler*/
 
     private void Start()
     {
+        _boxCollider = GetComponent<BoxCollider>();
         _maxItemIndex = requiredItemsParents.Count - 1;
-        for (int i = 0; i < requiredItemsParents.Count; i++)
+        GetItems();
+    }
+
+    private void GetItems()
+    {
+        if (requiredItemsParents.Count > 0)
         {
-            if (requiredItemsParents[i].childCount > 0)
+            for (int i = 0; i < requiredItemsParents.Count; i++)
             {
-                requiredItems.Add(requiredItemsParents[i]
-                    .GetComponentInChildren<Item>());
+                if (requiredItemsParents[i].childCount > 0)
+                {
+                    requiredItems.Add(requiredItemsParents[i]
+                        .GetComponentInChildren<Item>());
+                }
             }
         }
+        if (givingItem == null && givingItemParentTransform != null)
+        {
+            givingItem = givingItemParentTransform.GetComponentInChildren<Item>();
+        }
+    }
 
+
+    private void FixedUpdate()
+    {
+        _boxCollider.enabled = DraggableContainer.IsDragging;      
     }
 
     private void OnMouseEnter()
     {
-        draggableItem = DraggableContainer.DraggableItem;
-        Debug.Log("DraggableItem: " + draggableItem);
+        _draggableItem = DraggableContainer.DraggableItem;
+
     }
 
     public void OnItemDrop()
     {
-        if (draggableItem != null)
+        if (_draggableItem != null)
         {
             Sprite draggableItemSprite = DraggableContainer.DraggableItem
                 .GetComponent<Image>().sprite;
@@ -57,12 +78,18 @@ public class Slot : MonoBehaviour/*, IDropHandler*/
 
             if (requiredItemSprite == draggableItemSprite)
             {
-                Debug.Log("Should remove the items");
                 _inventory.RemoveItem(requiredItems[_currItemIndex]);
                 if (_currItemIndex == _maxItemIndex)
                 {
-                    Inventory.AddItem(givingItem);
-                    gameObject.SetActive(false);
+                    if (givingItem.ItemPrefab != null)
+                    {
+                        givingItem.CouldBeInventory();
+                    }
+                    else
+                    {
+                        Inventory.AddItem(givingItem);
+                    }
+                    //gameObject.SetActive(false);
                 }
                 _currItemIndex++;
                 if (_spriteAfterUsingItem != null)
@@ -70,7 +97,12 @@ public class Slot : MonoBehaviour/*, IDropHandler*/
                     GetComponent<SpriteRenderer>().sprite = _spriteAfterUsingItem;
                 }
             }
-            draggableItem = null;
+            _draggableItem = null;
+            if (transform.TryGetComponent(out _boxCollider))
+            {
+                DraggableContainer.IsDragging = false;
+                _boxCollider.enabled = DraggableContainer.IsDragging;
+            }
         }
 
     }
