@@ -1,8 +1,6 @@
 using TMPro;
 using UnityEngine;
 using System.Collections;
-using Unity.VisualScripting;
-using UnityEditor.Tilemaps;
 
 public class Item : MonoBehaviour
 {
