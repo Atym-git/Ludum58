@@ -1,6 +1,8 @@
 using TMPro;
 using UnityEngine;
 using System.Collections;
+using Unity.VisualScripting;
+using UnityEditor.Tilemaps;
 
 public class Item : MonoBehaviour
 {
@@ -17,6 +19,9 @@ public class Item : MonoBehaviour
     private float _itemIconDisplayDuration;
 
     private bool _couldBeInInventory;
+    private bool _readyToMove;
+
+    [SerializeField] private float _moveTowardsXAfterPress;
 
     private GameObject _inventoryNotifPanel;
 
@@ -31,6 +36,7 @@ public class Item : MonoBehaviour
                           bool couldBeInInventory,
                           GameObject itemPrefab,
                           GameObject inventoryNotifPanel,
+                          float moveTowardsXAfterPress,
                           CoroutineRunner coroutineRunner)
     {
         ItemSprite = itemSprite;
@@ -39,6 +45,7 @@ public class Item : MonoBehaviour
         _couldBeInInventory = couldBeInInventory;
         ItemPrefab = itemPrefab;
         _inventoryNotifPanel = inventoryNotifPanel;
+        _moveTowardsXAfterPress = transform.position.x + moveTowardsXAfterPress;
         _coroutineRunner = coroutineRunner;
 
         GetComponent<SpriteRenderer>().sprite = itemSprite;
@@ -66,16 +73,24 @@ public class Item : MonoBehaviour
 
     }
 
+    private void FixedUpdate()
+    {
+        if (_readyToMove && transform.position.x < _moveTowardsXAfterPress)
+        {
+            Vector3 moveTo = transform.position + transform.right;
+            transform.position = Vector3.MoveTowards(transform.position, moveTo, 0.03f);
+        }
+    }
+
     public void OnClick()
     {
         Item item = gameObject.GetComponent<Item>();
         if (_couldBeInInventory)
         {
-            //GameObject itemCloneGO = Instantiate(item.gameObject);
-            //Item itemClone = itemCloneGO.GetComponent<Item>();
             Inventory.AddItem(item);
         }
 
+        _readyToMove = true;
         _inventoryNotifTMP.text = item._itemNotifText;
 
         _coroutineRunner.RunCoroutine(NotifyDuration(NotificationDuration, _inventoryNotifPanel));

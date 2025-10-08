@@ -32,6 +32,7 @@ public class ItemFabric
                                itemSO.CouldBeInInventory,
                                itemSO.ItemPrefab,
                                _inventoryNotifPanel,
+                               itemSO.MoveTowardsXAfterPress,
                                coroutineRunner);
 
             }

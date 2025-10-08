@@ -20,5 +20,8 @@ public class ItemSO : ScriptableObject
     public float ItemIconDisplayDuration { get; private set; }
     
     [field: SerializeField]
+    public float MoveTowardsXAfterPress { get; private set; }
+    
+    [field: SerializeField]
     public bool CouldBeInInventory { get; private set; }
 }

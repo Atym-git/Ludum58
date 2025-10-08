@@ -20,4 +20,4 @@ MonoBehaviour:
     just for our tree.
   <ItemNotificationDuration>k__BackingField: 5
   <ItemIconDisplayDuration>k__BackingField: 0
-  <CouldBeInInventory>k__BackingField: 1
+  <CouldBeInInventory>k__BackingField: 0
