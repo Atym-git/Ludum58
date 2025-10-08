@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 4b6961ccb03b83b44861617574a6e1e9
+guid: 88b4926f027da2742b007ad084c32177
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 9116875330491257521
-    second: shveia_nabor_0
+      213: 1551854200378430738
+    second: window_kids_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,7 +100,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: shveia_nabor_0
+      name: window_kids_0
       rect:
         serializedVersion: 2
         x: 0
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 1b2147f4fc5a58e70800000000000000
-      internalID: 9116875330491257521
+      spriteID: 21511c45c2b498510800000000000000
+      internalID: 1551854200378430738
       vertices: []
       indices: 
       edges: []
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      shveia_nabor_0: 9116875330491257521
+      window_kids_0: 1551854200378430738
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

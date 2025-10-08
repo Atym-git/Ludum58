@@ -10,12 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 379fd36feb28baa468046de9e6191256, type: 3}
-  m_Name: keyShkafSO11
+  m_Name: ZshitioSO42
   m_EditorClassIdentifier: 
-  <ItemSprite>k__BackingField: {fileID: -3048066783205267695, guid: 99df0b5215712aa4d9569475e6510c92, type: 3}
-  <ItemPrefab>k__BackingField: {fileID: 8466496239400231826, guid: af55a4ed9a289ca4180e42f9d88c269f, type: 3}
-  <ItemNotificationText>k__BackingField: It looks like a key to some furniture...
-    Just from which one?
+  <ItemSprite>k__BackingField: {fileID: 1316234479194557214, guid: 289ae91d048d2f340a4adf37abb3de3e, type: 3}
+  <ItemPrefab>k__BackingField: {fileID: 4421437880142546502, guid: 58c2ac98476db6740a9c714cbcb500bd, type: 3}
+  <ItemNotificationText>k__BackingField: There was such an order here only before
+    the holidays.... We just need to put the toys carefully... What is this..? Isn't
+    it Lena's favorite hairpin? What is she doing here?
   <ItemNotificationDuration>k__BackingField: 5
   <ItemIconDisplayDuration>k__BackingField: 0
   <CouldBeInInventory>k__BackingField: 1

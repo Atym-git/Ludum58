@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: bedDvaSO3
   m_EditorClassIdentifier: 
   <ItemSprite>k__BackingField: {fileID: -5846290393830088467, guid: bb9cb006d7422784e94cde7963b57482, type: 3}
-  <ItemPrefab>k__BackingField: {fileID: 0}
+  <ItemPrefab>k__BackingField: {fileID: 1383869965532363964, guid: 712bed708dbb8644aa5e5d7896cbc694, type: 3}
   <ItemNotificationText>k__BackingField: I never noticed how huge this bed is...
     It makes you feel lonely... I'm definitely not going to sleep here alone.
   <ItemNotificationDuration>k__BackingField: 5
