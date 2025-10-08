@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class CursorTrack
 {
-    public void TrackOnClick(Camera camera/*, LayerMask itemLayerMask*/)
+    public void TrackOnClick(Camera camera)
     {
         Ray ray = camera.ScreenPointToRay(Input.mousePosition);
         if (Physics.Raycast(ray, out RaycastHit hitInfo))

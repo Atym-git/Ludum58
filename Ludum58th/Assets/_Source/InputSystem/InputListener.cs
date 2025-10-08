@@ -8,7 +8,6 @@ public class InputListener : MonoBehaviour
 
     private InputAction _movement;
     private InputAction _click;
-    private InputAction _interact;
 
     private Invoker _invoker;
 
@@ -38,10 +37,6 @@ public class InputListener : MonoBehaviour
         _click = _mainInputSystem.UI.Click;
         _click.performed += OnClick;
         _click.Enable();
-
-        //_interact = _mainInputSystem.Player.OpenPhoto;
-        //_mainInputSystem.Player.OpenPhoto.performed += Interact;
-        //_interact.Enable();
     }
 
     private void Interact()
@@ -69,6 +64,5 @@ public class InputListener : MonoBehaviour
     {
         _movement.Disable();
         _click.Disable();
-        //_interact.Disable();
     }
 }
