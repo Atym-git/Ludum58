@@ -13,7 +13,7 @@ public class PhotoDisplay
 
     public void ShowPhoto()
     {
-        _isPhotoActive = !_isPhotoActive;
+        _isPhotoActive = !_photo.activeInHierarchy;
         _photo.SetActive(_isPhotoActive);
     }
 }
