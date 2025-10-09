@@ -148,13 +148,13 @@ MonoBehaviour:
   requiredItems: []
   givingItem: {fileID: 0}
   givingItemParentTransform: {fileID: 1490532871}
-  _isPhotoChanger: 0
-  _photoPanel: {fileID: 0}
-  _photoPartImage: {fileID: 0}
-  _photoPartDoneSprite: {fileID: 0}
-  _slots: []
+  isPhotoChanger: 0
+  photoPanel: {fileID: 0}
+  photoPartImage: {fileID: 0}
+  photoPartDoneSprite: {fileID: 0}
+  slots: []
   <IsPartDone>k__BackingField: 0
-  _itemsDone: 0
+  itemsLeftTMP: {fileID: 0}
 --- !u!65 &12904787
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -223,6 +223,10 @@ PrefabInstance:
     - target: {fileID: 4454979334617962528, guid: 158b38ce8c58e9f41869b7f7b82ab0d6, type: 3}
       propertyPath: m_LocalPosition.y
       value: -7
+      objectReference: {fileID: 0}
+    - target: {fileID: 4656062930309921160, guid: 158b38ce8c58e9f41869b7f7b82ab0d6, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4752300501746825119, guid: 158b38ce8c58e9f41869b7f7b82ab0d6, type: 3}
       propertyPath: m_Sprite
@@ -510,16 +514,16 @@ MonoBehaviour:
   - {fileID: 748242214}
   givingItem: {fileID: 0}
   givingItemParentTransform: {fileID: 0}
-  _isPhotoChanger: 1
-  _photoPanel: {fileID: 557707700}
-  _photoPartImage: {fileID: 459091225}
-  _photoPartDoneSprite: {fileID: 21300000, guid: b1ac3b6b625a1f04b98277aecb9ffdf9, type: 3}
-  _slots:
+  isPhotoChanger: 1
+  photoPanel: {fileID: 557707700}
+  photoPartImage: {fileID: 459091225}
+  photoPartDoneSprite: {fileID: 21300000, guid: b1ac3b6b625a1f04b98277aecb9ffdf9, type: 3}
+  slots:
   - {fileID: 1370108973}
   - {fileID: 1442773368}
   - {fileID: 62528314}
   <IsPartDone>k__BackingField: 0
-  _itemsDone: 0
+  itemsLeftTMP: {fileID: 0}
 --- !u!65 &62528315
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -620,13 +624,13 @@ MonoBehaviour:
   requiredItems: []
   givingItem: {fileID: 0}
   givingItemParentTransform: {fileID: 0}
-  _isPhotoChanger: 1
-  _photoPanel: {fileID: 557707700}
-  _photoPartImage: {fileID: 706213793}
-  _photoPartDoneSprite: {fileID: 21300000, guid: cce7fd36a27b0aa4584fb6c90b05f4fb, type: 3}
-  _slots: []
+  isPhotoChanger: 1
+  photoPanel: {fileID: 557707700}
+  photoPartImage: {fileID: 706213793}
+  photoPartDoneSprite: {fileID: 21300000, guid: cce7fd36a27b0aa4584fb6c90b05f4fb, type: 3}
+  slots: []
   <IsPartDone>k__BackingField: 0
-  _itemsDone: 0
+  itemsLeftTMP: {fileID: 0}
 --- !u!65 &128844213
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -713,13 +717,13 @@ MonoBehaviour:
   requiredItems: []
   givingItem: {fileID: 0}
   givingItemParentTransform: {fileID: 7550370762754968470}
-  _isPhotoChanger: 0
-  _photoPanel: {fileID: 0}
-  _photoPartImage: {fileID: 0}
-  _photoPartDoneSprite: {fileID: 0}
-  _slots: []
+  isPhotoChanger: 0
+  photoPanel: {fileID: 0}
+  photoPartImage: {fileID: 0}
+  photoPartDoneSprite: {fileID: 0}
+  slots: []
   <IsPartDone>k__BackingField: 0
-  _itemsDone: 0
+  itemsLeftTMP: {fileID: 0}
 --- !u!4 &241367819 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 9038956877218219135, guid: 968074b44393c4742bfa979deee4e483, type: 3}
@@ -884,13 +888,13 @@ MonoBehaviour:
   requiredItems: []
   givingItem: {fileID: 0}
   givingItemParentTransform: {fileID: 0}
-  _isPhotoChanger: 1
-  _photoPanel: {fileID: 557707700}
-  _photoPartImage: {fileID: 1474086144}
-  _photoPartDoneSprite: {fileID: 21300000, guid: c60fb90a70dc9494eb7fa46b9bffa592, type: 3}
-  _slots: []
+  isPhotoChanger: 1
+  photoPanel: {fileID: 557707700}
+  photoPartImage: {fileID: 1474086144}
+  photoPartDoneSprite: {fileID: 21300000, guid: c60fb90a70dc9494eb7fa46b9bffa592, type: 3}
+  slots: []
   <IsPartDone>k__BackingField: 0
-  _itemsDone: 0
+  itemsLeftTMP: {fileID: 0}
 --- !u!65 &336530755
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1013,13 +1017,13 @@ MonoBehaviour:
   requiredItems: []
   givingItem: {fileID: 0}
   givingItemParentTransform: {fileID: 0}
-  _isPhotoChanger: 1
-  _photoPanel: {fileID: 557707700}
-  _photoPartImage: {fileID: 1352358464}
-  _photoPartDoneSprite: {fileID: 21300000, guid: 66432ea823aa2944ab2ccc386ad2dd2f, type: 3}
-  _slots: []
+  isPhotoChanger: 1
+  photoPanel: {fileID: 557707700}
+  photoPartImage: {fileID: 1352358464}
+  photoPartDoneSprite: {fileID: 21300000, guid: 66432ea823aa2944ab2ccc386ad2dd2f, type: 3}
+  slots: []
   <IsPartDone>k__BackingField: 0
-  _itemsDone: 0
+  itemsLeftTMP: {fileID: 0}
 --- !u!65 &515024237
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2246,9 +2250,41 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 247568709206711027, guid: 968074b44393c4742bfa979deee4e483, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 247568709206711027, guid: 968074b44393c4742bfa979deee4e483, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 247568709206711027, guid: 968074b44393c4742bfa979deee4e483, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 247568709206711027, guid: 968074b44393c4742bfa979deee4e483, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 292432450854720886, guid: 968074b44393c4742bfa979deee4e483, type: 3}
       propertyPath: m_Layer
       value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 296117296674442908, guid: 968074b44393c4742bfa979deee4e483, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 296117296674442908, guid: 968074b44393c4742bfa979deee4e483, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 296117296674442908, guid: 968074b44393c4742bfa979deee4e483, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 296117296674442908, guid: 968074b44393c4742bfa979deee4e483, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 997942325154026989, guid: 968074b44393c4742bfa979deee4e483, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
@@ -2675,6 +2711,16 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 968074b44393c4742bfa979deee4e483, type: 3}
+--- !u!224 &925672883 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 296117296674442908, guid: 968074b44393c4742bfa979deee4e483, type: 3}
+  m_PrefabInstance: {fileID: 925672882}
+  m_PrefabAsset: {fileID: 0}
+--- !u!224 &925672884 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 247568709206711027, guid: 968074b44393c4742bfa979deee4e483, type: 3}
+  m_PrefabInstance: {fileID: 925672882}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &933696783 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3813886732745453865, guid: 6c0c800b0070dc944bca5d8f6ad88754, type: 3}
@@ -3184,6 +3230,17 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 5444174663474661499, guid: 968074b44393c4742bfa979deee4e483, type: 3}
   m_PrefabInstance: {fileID: 925672882}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1178950269 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3962385947885760661, guid: 158b38ce8c58e9f41869b7f7b82ab0d6, type: 3}
+  m_PrefabInstance: {fileID: 18234920}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1200265756
 GameObject:
   m_ObjectHideFlags: 0
@@ -3647,13 +3704,13 @@ MonoBehaviour:
   requiredItems: []
   givingItem: {fileID: 0}
   givingItemParentTransform: {fileID: 18234921}
-  _isPhotoChanger: 0
-  _photoPanel: {fileID: 0}
-  _photoPartImage: {fileID: 0}
-  _photoPartDoneSprite: {fileID: 0}
-  _slots: []
+  isPhotoChanger: 0
+  photoPanel: {fileID: 0}
+  photoPartImage: {fileID: 0}
+  photoPartDoneSprite: {fileID: 0}
+  slots: []
   <IsPartDone>k__BackingField: 0
-  _itemsDone: 0
+  itemsLeftTMP: {fileID: 0}
 --- !u!65 &1299976448
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3765,16 +3822,16 @@ MonoBehaviour:
   requiredItems: []
   givingItem: {fileID: 0}
   givingItemParentTransform: {fileID: 0}
-  _isPhotoChanger: 1
-  _photoPanel: {fileID: 557707700}
-  _photoPartImage: {fileID: 459091225}
-  _photoPartDoneSprite: {fileID: 21300000, guid: b1ac3b6b625a1f04b98277aecb9ffdf9, type: 3}
-  _slots:
+  isPhotoChanger: 1
+  photoPanel: {fileID: 557707700}
+  photoPartImage: {fileID: 459091225}
+  photoPartDoneSprite: {fileID: 21300000, guid: b1ac3b6b625a1f04b98277aecb9ffdf9, type: 3}
+  slots:
   - {fileID: 1370108973}
   - {fileID: 1442773368}
   - {fileID: 62528314}
   <IsPartDone>k__BackingField: 0
-  _itemsDone: 0
+  itemsLeftTMP: {fileID: 0}
 --- !u!65 &1370108974
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3829,16 +3886,16 @@ MonoBehaviour:
   - {fileID: 1384604655}
   givingItem: {fileID: 0}
   givingItemParentTransform: {fileID: 0}
-  _isPhotoChanger: 1
-  _photoPanel: {fileID: 557707700}
-  _photoPartImage: {fileID: 459091225}
-  _photoPartDoneSprite: {fileID: 21300000, guid: b1ac3b6b625a1f04b98277aecb9ffdf9, type: 3}
-  _slots:
+  isPhotoChanger: 1
+  photoPanel: {fileID: 557707700}
+  photoPartImage: {fileID: 459091225}
+  photoPartDoneSprite: {fileID: 21300000, guid: b1ac3b6b625a1f04b98277aecb9ffdf9, type: 3}
+  slots:
   - {fileID: 1370108973}
   - {fileID: 1442773368}
   - {fileID: 62528314}
   <IsPartDone>k__BackingField: 0
-  _itemsDone: 0
+  itemsLeftTMP: {fileID: 0}
 --- !u!65 &1442773369
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4476,6 +4533,50 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3922954438943939086, guid: eb066b2f124263f478672cba66297b6b, type: 3}
+      propertyPath: _photo
+      value: 
+      objectReference: {fileID: 925672884}
+    - target: {fileID: 3922954438943939086, guid: eb066b2f124263f478672cba66297b6b, type: 3}
+      propertyPath: _photoPanel
+      value: 
+      objectReference: {fileID: 925672883}
+    - target: {fileID: 3922954438943939086, guid: eb066b2f124263f478672cba66297b6b, type: 3}
+      propertyPath: <photoSlots>k__BackingField.Array.size
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 3922954438943939086, guid: eb066b2f124263f478672cba66297b6b, type: 3}
+      propertyPath: '<photoSlots>k__BackingField.Array.data[0]'
+      value: 
+      objectReference: {fileID: 1929272664}
+    - target: {fileID: 3922954438943939086, guid: eb066b2f124263f478672cba66297b6b, type: 3}
+      propertyPath: '<photoSlots>k__BackingField.Array.data[1]'
+      value: 
+      objectReference: {fileID: 515024236}
+    - target: {fileID: 3922954438943939086, guid: eb066b2f124263f478672cba66297b6b, type: 3}
+      propertyPath: '<photoSlots>k__BackingField.Array.data[2]'
+      value: 
+      objectReference: {fileID: 128844212}
+    - target: {fileID: 3922954438943939086, guid: eb066b2f124263f478672cba66297b6b, type: 3}
+      propertyPath: '<photoSlots>k__BackingField.Array.data[3]'
+      value: 
+      objectReference: {fileID: 1370108973}
+    - target: {fileID: 3922954438943939086, guid: eb066b2f124263f478672cba66297b6b, type: 3}
+      propertyPath: '<photoSlots>k__BackingField.Array.data[4]'
+      value: 
+      objectReference: {fileID: 1988043145}
+    - target: {fileID: 3922954438943939086, guid: eb066b2f124263f478672cba66297b6b, type: 3}
+      propertyPath: '<photoSlots>k__BackingField.Array.data[5]'
+      value: 
+      objectReference: {fileID: 1442773368}
+    - target: {fileID: 3922954438943939086, guid: eb066b2f124263f478672cba66297b6b, type: 3}
+      propertyPath: '<photoSlots>k__BackingField.Array.data[6]'
+      value: 
+      objectReference: {fileID: 62528314}
+    - target: {fileID: 3922954438943939086, guid: eb066b2f124263f478672cba66297b6b, type: 3}
+      propertyPath: '<photoSlots>k__BackingField.Array.data[7]'
+      value: 
+      objectReference: {fileID: 336530754}
     - target: {fileID: 4435821747484530608, guid: eb066b2f124263f478672cba66297b6b, type: 3}
       propertyPath: m_Name
       value: ScriptsManager
@@ -4838,13 +4939,13 @@ MonoBehaviour:
   requiredItems: []
   givingItem: {fileID: 748242214}
   givingItemParentTransform: {fileID: 0}
-  _isPhotoChanger: 0
-  _photoPanel: {fileID: 0}
-  _photoPartImage: {fileID: 0}
-  _photoPartDoneSprite: {fileID: 0}
-  _slots: []
+  isPhotoChanger: 0
+  photoPanel: {fileID: 0}
+  photoPartImage: {fileID: 0}
+  photoPartDoneSprite: {fileID: 0}
+  slots: []
   <IsPartDone>k__BackingField: 0
-  _itemsDone: 0
+  itemsLeftTMP: {fileID: 0}
 --- !u!1 &1656441728 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 685171237074449632, guid: 158b38ce8c58e9f41869b7f7b82ab0d6, type: 3}
@@ -4920,13 +5021,13 @@ MonoBehaviour:
   requiredItems: []
   givingItem: {fileID: 1384604655}
   givingItemParentTransform: {fileID: 0}
-  _isPhotoChanger: 0
-  _photoPanel: {fileID: 0}
-  _photoPartImage: {fileID: 0}
-  _photoPartDoneSprite: {fileID: 0}
-  _slots: []
+  isPhotoChanger: 0
+  photoPanel: {fileID: 0}
+  photoPartImage: {fileID: 0}
+  photoPartDoneSprite: {fileID: 0}
+  slots: []
   <IsPartDone>k__BackingField: 0
-  _itemsDone: 0
+  itemsLeftTMP: {fileID: 1178950269}
 --- !u!65 &1760409574
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5290,13 +5391,13 @@ MonoBehaviour:
   requiredItems: []
   givingItem: {fileID: 0}
   givingItemParentTransform: {fileID: 0}
-  _isPhotoChanger: 1
-  _photoPanel: {fileID: 557707700}
-  _photoPartImage: {fileID: 542573315}
-  _photoPartDoneSprite: {fileID: 21300000, guid: 9a648a2c606c12c4aa32285307bbb335, type: 3}
-  _slots: []
+  isPhotoChanger: 1
+  photoPanel: {fileID: 557707700}
+  photoPartImage: {fileID: 542573315}
+  photoPartDoneSprite: {fileID: 21300000, guid: 9a648a2c606c12c4aa32285307bbb335, type: 3}
+  slots: []
   <IsPartDone>k__BackingField: 0
-  _itemsDone: 0
+  itemsLeftTMP: {fileID: 0}
 --- !u!65 &1929272665
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5340,13 +5441,13 @@ MonoBehaviour:
   requiredItems: []
   givingItem: {fileID: 0}
   givingItemParentTransform: {fileID: 0}
-  _isPhotoChanger: 1
-  _photoPanel: {fileID: 557707700}
-  _photoPartImage: {fileID: 446813550}
-  _photoPartDoneSprite: {fileID: 21300000, guid: d3cb8b9d7fc7608488e20b6d21b8960e, type: 3}
-  _slots: []
+  isPhotoChanger: 1
+  photoPanel: {fileID: 557707700}
+  photoPartImage: {fileID: 446813550}
+  photoPartDoneSprite: {fileID: 21300000, guid: d3cb8b9d7fc7608488e20b6d21b8960e, type: 3}
+  slots: []
   <IsPartDone>k__BackingField: 0
-  _itemsDone: 0
+  itemsLeftTMP: {fileID: 0}
 --- !u!65 &1988043146
 BoxCollider:
   m_ObjectHideFlags: 0

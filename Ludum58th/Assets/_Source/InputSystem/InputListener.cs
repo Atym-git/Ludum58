@@ -1,4 +1,5 @@
 using System;
+using System.Security.Cryptography;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -10,6 +11,8 @@ public class InputListener : MonoBehaviour
     private InputAction _click;
 
     private Invoker _invoker;
+
+    private bool _enabled = true;
 
     public void Construct(Invoker invoker)
     {
@@ -41,11 +44,13 @@ public class InputListener : MonoBehaviour
 
     private void Interact()
     {
-        if (Input.GetKeyDown(KeyCode.E))
+        if (_enabled)
         {
-            _invoker.InvokePhotoDisplay();
+            if (Input.GetKeyDown(KeyCode.E))
+            {
+                _invoker.InvokePhotoDisplay();
+            }
         }
-        
     }
 
     private void OnClick(InputAction.CallbackContext context)
@@ -62,7 +67,13 @@ public class InputListener : MonoBehaviour
 
     private void OnDisable()
     {
+        DisableInputs();
+    }
+
+    public void DisableInputs()
+    {
         _movement.Disable();
         _click.Disable();
+        _enabled = false;
     }
 }

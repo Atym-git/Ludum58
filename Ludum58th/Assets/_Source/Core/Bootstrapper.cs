@@ -7,6 +7,7 @@ public class Bootstrapper : MonoBehaviour
     [SerializeField] private InputListener inputListener;
     [SerializeField] private PlayerData playerData;
     [SerializeField] private CoroutineRunner runner;
+    [SerializeField] private GameEnder gameEnder;
 
     [SerializeField] private List<Slot> slots = new();
 
@@ -49,13 +50,15 @@ public class Bootstrapper : MonoBehaviour
                                       photoDisplay,
                                       sFXPlayer);
 
+        IsPhotoDone isPhotoDone = new IsPhotoDone(gameEnder.photoSlots, gameEnder);
+
         Inventory inventory = new Inventory(invoker);
 
         inputListener.Construct(invoker);
 
         for (int i = 0; i < slots.Count; i++)
         {
-            slots[i].Construct(inventory);
+            slots[i].Construct(inventory, isPhotoDone);
         }
     }
 }

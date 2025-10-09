@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
@@ -27,26 +28,42 @@ public class Slot : MonoBehaviour/*, IDropHandler*/
 
     [field: Header("Photo Related")]
 
-    [SerializeField] private bool _isPhotoChanger = false;
+    [SerializeField] private bool isPhotoChanger = false;
 
-    [SerializeField] private GameObject _photoPanel;
+    [SerializeField] private GameObject photoPanel;
 
-    [SerializeField] private Image _photoPartImage;
-    [SerializeField] private Sprite _photoPartDoneSprite;
+    [SerializeField] private Image photoPartImage;
+    [SerializeField] private Sprite photoPartDoneSprite;
 
-    [SerializeField] private List<Slot> _slots = new();
+    [SerializeField] private List<Slot> slots = new();
 
     [field:SerializeField] public bool IsPartDone { get; private set; }
-    [SerializeField] private int _itemsDone = 0;
 
-    public void Construct(Inventory inventory)
+    [SerializeField] private TextMeshProUGUI itemsLeftTMP;
+
+    private IsPhotoDone _isPhotoDone;
+
+    public void Construct(Inventory inventory, IsPhotoDone isPhotoDone)
     {
         _inventory = inventory;
+        _isPhotoDone = isPhotoDone;
     }
 
     private void Start()
     {
         _boxCollider = GetComponent<BoxCollider>();
+        GetMaxReqItemIndex();
+
+        GetRequiredItems();
+        GetGivingItems();
+        if (isPhotoChanger && slots.Count == 0)
+        {
+            slots.Add(this);
+        }
+    }
+
+    private void GetMaxReqItemIndex()
+    {
         if (requiredItemsParents.Count > 0)
         {
             _maxRequiredItemIndex = requiredItemsParents.Count - 1;
@@ -55,15 +72,9 @@ public class Slot : MonoBehaviour/*, IDropHandler*/
         {
             _maxRequiredItemIndex = requiredItems.Count - 1;
         }
-        
-        GetItems();
-        if (_isPhotoChanger && _slots.Count == 0)
-        {
-            _slots.Add(this);
-        }
     }
 
-    private void GetItems()
+    private void GetRequiredItems()
     {
         if (requiredItemsParents.Count > 0)
         {
@@ -76,12 +87,15 @@ public class Slot : MonoBehaviour/*, IDropHandler*/
                 }
             }
         }
+    }
+
+    private void GetGivingItems()
+    {
         if (givingItem == null && givingItemParentTransform != null)
         {
             givingItem = givingItemParentTransform.GetComponentInChildren<Item>();
         }
     }
-
 
     private void FixedUpdate()
     {
@@ -91,7 +105,6 @@ public class Slot : MonoBehaviour/*, IDropHandler*/
     private void OnMouseEnter()
     {
         _draggableItem = DraggableContainer.DraggableItem;
-
     }
 
     public void OnItemDrop()
@@ -108,22 +121,33 @@ public class Slot : MonoBehaviour/*, IDropHandler*/
                 _inventory.RemoveItem(requiredItems[_currRequiredItemIndex]);
                 if (_currRequiredItemIndex == _maxRequiredItemIndex)
                 {
-                    if (_isPhotoChanger)
+                    if (isPhotoChanger)
                     {
                         IsPartDone = true;
-                        
-                        for (int i = 0; i < _slots.Count; i++)
+                        GameObject itemPrefab = transform.GetChild(0).gameObject;
+                        itemPrefab.SetActive(true);
+
+                        if (_isPhotoDone.IsPartDone(slots))
                         {
-                            _itemsDone += Convert.ToInt32(_slots[i].IsPartDone);
-                            if (_itemsDone == _slots.Count)
-                            {
-                                _photoPanel.SetActive(true);
-                                ChangePhotoPart(_photoPartImage, _photoPartDoneSprite);
-                                GameObject itemPrefab = transform.GetChild(0).gameObject;
-                                itemPrefab.SetActive(true);
-                            }
+                            photoPanel.SetActive(true);
+                            ChangePhotoPart(photoPartImage, photoPartDoneSprite);
                         }
-                        _itemsDone = 0;
+
+                        //if (AreAllPartsDone())
+                        //{
+
+                        //}
+                        //for (int i = 0; i < slots.Count; i++)
+                        //{
+                        //    _itemsDone += Convert.ToInt32(slots[i].IsPartDone);
+                        //    if (_itemsDone == slots.Count)
+                        //    {
+                        //        photoPanel.SetActive(true);
+                        //        ChangePhotoPart(photoPartImage, photoPartDoneSprite);
+                        //        GameObject itemPrefab = transform.GetChild(0).gameObject;
+                        //        itemPrefab.SetActive(true);
+                        //    }
+                        //}
                     }
                     else if (givingItem.ItemPrefab != null)
                     {
@@ -137,13 +161,26 @@ public class Slot : MonoBehaviour/*, IDropHandler*/
                 _currRequiredItemIndex++;
             }
             _draggableItem = null;
+
             if (transform.TryGetComponent(out _boxCollider))
             {
                 DraggableContainer.IsDragging = false;
                 _boxCollider.enabled = DraggableContainer.IsDragging;
             }
+
+            ShowLeftItemsUI();
         }
 
+    }
+
+    public void ShowLeftItemsUI()
+    {
+        if (itemsLeftTMP != null)
+        {
+            int itemsLeft = requiredItems.Count - _currRequiredItemIndex;
+            itemsLeftTMP.text = itemsLeft.ToString();
+            itemsLeftTMP.gameObject.SetActive(itemsLeft != 0);
+        }
     }
 
     private void ChangePhotoPart(Image partImage, Sprite photoPartDoneSprite)
