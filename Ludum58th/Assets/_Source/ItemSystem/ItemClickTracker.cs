@@ -3,10 +3,15 @@ using UnityEngine;
 public class ItemClickTracker : MonoBehaviour
 {
     public void OnRayCastHit()
-    {  
-        if (transform.parent.parent.TryGetComponent(out Item item))
+    {
+        Transform itemTransform = transform.parent.parent;
+        if (itemTransform.TryGetComponent(out Item item))
         {
             item.OnClick();
+            if (itemTransform.parent.TryGetComponent(out Slot slot))
+            {
+                slot.ShowLeftItemsUI();
+            }
         }
     }
 }

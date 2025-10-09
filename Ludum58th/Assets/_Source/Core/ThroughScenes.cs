@@ -7,4 +7,9 @@ public class ThroughScenes : MonoBehaviour
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
+    
+    public void GoToMenuScene()
+    {
+        SceneManager.LoadScene(0);
+    }
 }

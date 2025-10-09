@@ -16,7 +16,6 @@ public class CursorTrack
             {
                 itemClickTracker.OnRayCastHit();
             }
-                
         }
     }
 }
