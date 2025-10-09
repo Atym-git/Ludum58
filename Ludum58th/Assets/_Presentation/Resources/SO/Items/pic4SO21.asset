@@ -17,6 +17,7 @@ MonoBehaviour:
   <ItemNotificationText>k__BackingField: My parents sent this photo when we bought
     this apartment and started to renovate it. They said, "So that you don't forget
     to take your granddaughter to our seaside."
-  <ItemNotificationDuration>k__BackingField: 5
+  <ItemNotificationDuration>k__BackingField: 90
   <ItemIconDisplayDuration>k__BackingField: 0
+  <MoveTowardsXAfterPress>k__BackingField: 0
   <CouldBeInInventory>k__BackingField: 0

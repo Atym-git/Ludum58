@@ -17,7 +17,7 @@ MonoBehaviour:
   <ItemNotificationText>k__BackingField: Teapot... Olya snatched it from a sale..?
     She loved him very much and always put him in the center of the table.. We have
     never drunk tea from it... After all, it was always "for a special occasion"
-  <ItemNotificationDuration>k__BackingField: 5
+  <ItemNotificationDuration>k__BackingField: 90
   <ItemIconDisplayDuration>k__BackingField: 0
   <MoveTowardsXAfterPress>k__BackingField: 0
   <CouldBeInInventory>k__BackingField: 1

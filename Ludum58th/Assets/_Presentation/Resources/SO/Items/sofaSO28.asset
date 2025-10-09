@@ -16,6 +16,7 @@ MonoBehaviour:
   <ItemPrefab>k__BackingField: {fileID: 230885322503886466, guid: 7e8efe277c3e5694b930ba1c6b034ff9, type: 3}
   <ItemNotificationText>k__BackingField: My parents had the same one, it always reminded
     me of their home and my childhood.
-  <ItemNotificationDuration>k__BackingField: 5
+  <ItemNotificationDuration>k__BackingField: 90
   <ItemIconDisplayDuration>k__BackingField: 0
+  <MoveTowardsXAfterPress>k__BackingField: 0
   <CouldBeInInventory>k__BackingField: 0

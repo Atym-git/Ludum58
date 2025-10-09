@@ -17,7 +17,7 @@ MonoBehaviour:
   <ItemNotificationText>k__BackingField: She asked me to move the table to the window...
     It seems that she was building a fortress on it "on the mountain" so that "the
     dragon could not grab her and drag her into his cave"
-  <ItemNotificationDuration>k__BackingField: 5
+  <ItemNotificationDuration>k__BackingField: 90
   <ItemIconDisplayDuration>k__BackingField: 0
   <MoveTowardsXAfterPress>k__BackingField: 0
   <CouldBeInInventory>k__BackingField: 0

@@ -97,6 +97,7 @@ public class Item : MonoBehaviour
 
     public void ShowItemNotifText(string notificationText)
     {
+        Debug.Log(_inventoryNotifTMP);
         _inventoryNotifTMP.text = notificationText;
         _coroutineRunner.RunCoroutine(NotifyDuration(NotificationDuration, _inventoryNotifPanel));
     }

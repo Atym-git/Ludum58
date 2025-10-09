@@ -17,7 +17,7 @@ MonoBehaviour:
   <ItemNotificationText>k__BackingField: Ridiculous hat... Olga bought it when we
     were on a family vacation... to me... She managed to get me to wear it... Her
     smile was worth it, though...
-  <ItemNotificationDuration>k__BackingField: 5
+  <ItemNotificationDuration>k__BackingField: 90
   <ItemIconDisplayDuration>k__BackingField: 0
   <MoveTowardsXAfterPress>k__BackingField: 0
   <CouldBeInInventory>k__BackingField: 1

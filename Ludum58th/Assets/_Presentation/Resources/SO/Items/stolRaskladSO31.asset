@@ -18,6 +18,7 @@ MonoBehaviour:
     Lenochka was about to start 4th grade soon, and we wanted to capture the end
     of her childhood... I want to go back to that day, to see everything as it was
     then... To keep it the same
-  <ItemNotificationDuration>k__BackingField: 5
+  <ItemNotificationDuration>k__BackingField: 90
   <ItemIconDisplayDuration>k__BackingField: 0
+  <MoveTowardsXAfterPress>k__BackingField: 0
   <CouldBeInInventory>k__BackingField: 0

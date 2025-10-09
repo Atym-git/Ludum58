@@ -16,7 +16,7 @@ MonoBehaviour:
   <ItemPrefab>k__BackingField: {fileID: 5085585849761172855, guid: f0c25067cb202ac4cad0447583ca872f, type: 3}
   <ItemNotificationText>k__BackingField: It's a good powder. He even washed Lenin's
     baby diapers.
-  <ItemNotificationDuration>k__BackingField: 5
+  <ItemNotificationDuration>k__BackingField: 90
   <ItemIconDisplayDuration>k__BackingField: 0
   <MoveTowardsXAfterPress>k__BackingField: 0
   <CouldBeInInventory>k__BackingField: 1

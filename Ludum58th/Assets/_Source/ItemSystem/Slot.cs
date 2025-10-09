@@ -40,6 +40,7 @@ public class Slot : MonoBehaviour/*, IDropHandler*/
     [field:SerializeField] public bool IsPartDone { get; private set; }
 
     [SerializeField] private TextMeshProUGUI itemsLeftTMP;
+    [SerializeField] private GameObject itemsLeftImage;
 
     private IsPhotoDone _isPhotoDone;
 
@@ -173,6 +174,7 @@ public class Slot : MonoBehaviour/*, IDropHandler*/
             int itemsLeft = requiredItems.Count - _currRequiredItemIndex;
             itemsLeftTMP.text = itemsLeft.ToString();
             itemsLeftTMP.gameObject.SetActive(itemsLeft != 0);
+            itemsLeftImage.gameObject.SetActive(itemsLeft != 0);
         }
     }
 

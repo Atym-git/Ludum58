@@ -16,7 +16,7 @@ MonoBehaviour:
   <ItemPrefab>k__BackingField: {fileID: 2907394519975918399, guid: b07ae559cfc6349468efdeee7af9a76b, type: 3}
   <ItemNotificationText>k__BackingField: It's too early to leave here... The doctor
     believes that our house will help me recover...
-  <ItemNotificationDuration>k__BackingField: 5
+  <ItemNotificationDuration>k__BackingField: 90
   <ItemIconDisplayDuration>k__BackingField: 0
   <MoveTowardsXAfterPress>k__BackingField: 0
   <CouldBeInInventory>k__BackingField: 0

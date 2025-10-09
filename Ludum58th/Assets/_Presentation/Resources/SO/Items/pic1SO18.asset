@@ -16,6 +16,7 @@ MonoBehaviour:
   <ItemPrefab>k__BackingField: {fileID: 3868679199311069343, guid: 2658eda55f01bfe43a6ec77a9409a105, type: 3}
   <ItemNotificationText>k__BackingField: '"Anastasia.".. we sailed on it on our honeymoon
     for a whole week. Just think about it... It''s been almost 11 years'
-  <ItemNotificationDuration>k__BackingField: 5
+  <ItemNotificationDuration>k__BackingField: 90
   <ItemIconDisplayDuration>k__BackingField: 0
+  <MoveTowardsXAfterPress>k__BackingField: 0
   <CouldBeInInventory>k__BackingField: 0

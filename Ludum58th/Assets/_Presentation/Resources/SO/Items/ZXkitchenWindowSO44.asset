@@ -18,7 +18,7 @@ MonoBehaviour:
     it warms the soul especially when a loved one is sitting at the table opposite
     you... It seems that Olya really liked to stir a small spoonful of ice cream
     in her morning coffee. It gave the kitchen a delicious vanilla smell.
-  <ItemNotificationDuration>k__BackingField: 5
+  <ItemNotificationDuration>k__BackingField: 90
   <ItemIconDisplayDuration>k__BackingField: 0
   <MoveTowardsXAfterPress>k__BackingField: 0
   <CouldBeInInventory>k__BackingField: 0

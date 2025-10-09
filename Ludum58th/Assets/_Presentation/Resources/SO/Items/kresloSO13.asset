@@ -17,6 +17,7 @@ MonoBehaviour:
   <ItemNotificationText>k__BackingField: When Lena was very young, she sat on my
     lap in this chair. In the evenings, we read her favorite fairy tales and drank
     tea with honey.
-  <ItemNotificationDuration>k__BackingField: 5
+  <ItemNotificationDuration>k__BackingField: 90
   <ItemIconDisplayDuration>k__BackingField: 0
+  <MoveTowardsXAfterPress>k__BackingField: 0
   <CouldBeInInventory>k__BackingField: 0

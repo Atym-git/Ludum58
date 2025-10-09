@@ -16,7 +16,7 @@ MonoBehaviour:
   <ItemPrefab>k__BackingField: {fileID: 323217628377871989, guid: 1e20a75596aec8b4f9a39e8abc43ef93, type: 3}
   <ItemNotificationText>k__BackingField: What's this pot doing here? It should be
     attributed to other colors.
-  <ItemNotificationDuration>k__BackingField: 5
+  <ItemNotificationDuration>k__BackingField: 90
   <ItemIconDisplayDuration>k__BackingField: 0
   <MoveTowardsXAfterPress>k__BackingField: 0
   <CouldBeInInventory>k__BackingField: 1

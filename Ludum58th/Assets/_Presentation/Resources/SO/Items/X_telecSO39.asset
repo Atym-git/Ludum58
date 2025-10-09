@@ -17,6 +17,7 @@ MonoBehaviour:
   <ItemNotificationText>k__BackingField: I'm not in the mood to turn it on at all...
     I used to watch "Goodnight Kids" with Lena.. But I don't want to watch them alone,
     and I don't want to watch anything else.
-  <ItemNotificationDuration>k__BackingField: 5
+  <ItemNotificationDuration>k__BackingField: 90
   <ItemIconDisplayDuration>k__BackingField: 0
+  <MoveTowardsXAfterPress>k__BackingField: 0
   <CouldBeInInventory>k__BackingField: 0

@@ -17,6 +17,7 @@ MonoBehaviour:
   <ItemNotificationText>k__BackingField: Lena didn't really like cleaning, but we
     made her put toys in a drawer. We tried to get her used to order before that...
     how she grows up...
-  <ItemNotificationDuration>k__BackingField: 5
+  <ItemNotificationDuration>k__BackingField: 90
   <ItemIconDisplayDuration>k__BackingField: 0
+  <MoveTowardsXAfterPress>k__BackingField: 0
   <CouldBeInInventory>k__BackingField: 0

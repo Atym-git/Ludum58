@@ -16,6 +16,7 @@ MonoBehaviour:
   <ItemPrefab>k__BackingField: {fileID: 1848877050416615714, guid: e7cc37ef4f683d345bb8f0f4b61f08d3, type: 3}
   <ItemNotificationText>k__BackingField: 'We often sat in the kitchen together.:
     Olya cooked, and Lena painted... There were even pencil marks on the table.'
-  <ItemNotificationDuration>k__BackingField: 5
+  <ItemNotificationDuration>k__BackingField: 90
   <ItemIconDisplayDuration>k__BackingField: 0
+  <MoveTowardsXAfterPress>k__BackingField: 0
   <CouldBeInInventory>k__BackingField: 0

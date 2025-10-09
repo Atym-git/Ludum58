@@ -15,7 +15,7 @@ MonoBehaviour:
   <ItemSprite>k__BackingField: {fileID: 21300000, guid: de16465257da6bf42b899728661b64e5, type: 3}
   <ItemPrefab>k__BackingField: {fileID: 4041070757874560365, guid: d04dbcbf76b70d941b512a3324cfe9fe, type: 3}
   <ItemNotificationText>k__BackingField: A stroller for Lena's favorite doll
-  <ItemNotificationDuration>k__BackingField: 5
+  <ItemNotificationDuration>k__BackingField: 90
   <ItemIconDisplayDuration>k__BackingField: 0
   <MoveTowardsXAfterPress>k__BackingField: 0
   <CouldBeInInventory>k__BackingField: 1
