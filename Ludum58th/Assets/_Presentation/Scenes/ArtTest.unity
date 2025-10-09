@@ -1722,6 +1722,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 7644515228265187756}
     - target: {fileID: 7973159611590987930, guid: 05f5c9e7e1a44604b8177da992a79e47, type: 3}
+      propertyPath: _itemNotifText
+      value: My old tie... Lena really liked tying it... I had to walk with someone
+        who wasn 't very careful.
+      objectReference: {fileID: 0}
+    - target: {fileID: 7973159611590987930, guid: 05f5c9e7e1a44604b8177da992a79e47, type: 3}
       propertyPath: _coroutineRunner
       value: 
       objectReference: {fileID: 10629319}
@@ -2930,6 +2935,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 1371630625416825078, guid: 968074b44393c4742bfa979deee4e483, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1373885298618919032, guid: 968074b44393c4742bfa979deee4e483, type: 3}
       propertyPath: m_Layer
       value: 7
@@ -3144,7 +3153,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6960137754895245776, guid: 968074b44393c4742bfa979deee4e483, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6974029478274669502, guid: 968074b44393c4742bfa979deee4e483, type: 3}
       propertyPath: m_Layer
@@ -3165,6 +3174,10 @@ PrefabInstance:
     - target: {fileID: 7062777335301667053, guid: 968074b44393c4742bfa979deee4e483, type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7231881244516159303, guid: 968074b44393c4742bfa979deee4e483, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -80
       objectReference: {fileID: 0}
     - target: {fileID: 7255272964530102443, guid: 968074b44393c4742bfa979deee4e483, type: 3}
       propertyPath: m_Layer
@@ -3265,6 +3278,22 @@ PrefabInstance:
     - target: {fileID: 8796002899612183900, guid: 968074b44393c4742bfa979deee4e483, type: 3}
       propertyPath: m_Layer
       value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 8946763747066670819, guid: 968074b44393c4742bfa979deee4e483, type: 3}
+      propertyPath: m_fontColor.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8946763747066670819, guid: 968074b44393c4742bfa979deee4e483, type: 3}
+      propertyPath: m_fontColor.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8946763747066670819, guid: 968074b44393c4742bfa979deee4e483, type: 3}
+      propertyPath: m_fontColor.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8946763747066670819, guid: 968074b44393c4742bfa979deee4e483, type: 3}
+      propertyPath: m_fontColor32.rgba
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 9031476716989541226, guid: 968074b44393c4742bfa979deee4e483, type: 3}
       propertyPath: m_Layer
