@@ -10,12 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 379fd36feb28baa468046de9e6191256, type: 3}
-  m_Name: sharfSO26
+  m_Name: ZXkidsWindowSO43
   m_EditorClassIdentifier: 
-  <ItemSprite>k__BackingField: {fileID: 21300000, guid: 37e180a7d7f2aa24289143ada8780e20, type: 3}
-  <ItemPrefab>k__BackingField: {fileID: 7653409501708637131, guid: 40a10c04f78be3541996c578fb9d76c9, type: 3}
-  <ItemNotificationText>k__BackingField: 
+  <ItemSprite>k__BackingField: {fileID: 0}
+  <ItemPrefab>k__BackingField: {fileID: 2275763908141593590, guid: b31454da4d0e5c2409c96a32fe270409, type: 3}
+  <ItemNotificationText>k__BackingField: She asked me to move the table to the window...
+    It seems that she was building a fortress on it "on the mountain" so that "the
+    dragon could not grab her and drag her into his cave"
   <ItemNotificationDuration>k__BackingField: 5
   <ItemIconDisplayDuration>k__BackingField: 0
   <MoveTowardsXAfterPress>k__BackingField: 0
-  <CouldBeInInventory>k__BackingField: 1
+  <CouldBeInInventory>k__BackingField: 0

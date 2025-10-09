@@ -15,6 +15,12 @@ public class PlayerData : MonoBehaviour
     
     [field:SerializeField]
     public Transform CharacterTransform { get; private set; }
+    
+    [field:SerializeField]
+    public Animator PlayerAnimator { get; private set; }
+    
+    [field:SerializeField]
+    public string AnimatorBoolParameterName { get; private set; }
 
     [field: SerializeField]
     public Transform InventoryIconsParent { get; private set; }

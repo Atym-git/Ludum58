@@ -320,9 +320,11 @@ MonoBehaviour:
   <PlayerSpeed>k__BackingField: 7.5
   <PlayerRb>k__BackingField: {fileID: 4303393580305851915}
   <CharacterTransform>k__BackingField: {fileID: 6720514250273984140}
+  <PlayerAnimator>k__BackingField: {fileID: 4968268069359085951}
+  <AnimatorBoolParameterName>k__BackingField: IsWalking
   <InventoryIconsParent>k__BackingField: {fileID: 8198929543112085972}
   <BlackScreen>k__BackingField: {fileID: 8796002899612183900}
-  <clickAudioClip>k__BackingField: {fileID: 8300000, guid: a23b38eb75df4e0489120d3b938d9567, type: 3}
+  <clickAudioClip>k__BackingField: {fileID: 8300000, guid: 5fd28192f0ce92642afdf5a1732b38fd, type: 3}
 --- !u!136 &6732726560443388057
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -3291,7 +3293,7 @@ AudioSource:
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0

@@ -43,6 +43,8 @@ public class Slot : MonoBehaviour/*, IDropHandler*/
 
     private IsPhotoDone _isPhotoDone;
 
+    [SerializeField] private GameObject helpingSpriteGO;
+
     public void Construct(Inventory inventory, IsPhotoDone isPhotoDone)
     {
         _inventory = inventory;
@@ -124,30 +126,21 @@ public class Slot : MonoBehaviour/*, IDropHandler*/
                     if (isPhotoChanger)
                     {
                         IsPartDone = true;
+
+                        if (helpingSpriteGO != null)
+                        {
+                            helpingSpriteGO.SetActive(false);
+                        }
+
                         GameObject itemPrefab = transform.GetChild(0).gameObject;
                         itemPrefab.SetActive(true);
 
                         if (_isPhotoDone.IsPartDone(slots))
                         {
+                            _isPhotoDone.CheckFullPhoto();
                             photoPanel.SetActive(true);
                             ChangePhotoPart(photoPartImage, photoPartDoneSprite);
                         }
-
-                        //if (AreAllPartsDone())
-                        //{
-
-                        //}
-                        //for (int i = 0; i < slots.Count; i++)
-                        //{
-                        //    _itemsDone += Convert.ToInt32(slots[i].IsPartDone);
-                        //    if (_itemsDone == slots.Count)
-                        //    {
-                        //        photoPanel.SetActive(true);
-                        //        ChangePhotoPart(photoPartImage, photoPartDoneSprite);
-                        //        GameObject itemPrefab = transform.GetChild(0).gameObject;
-                        //        itemPrefab.SetActive(true);
-                        //    }
-                        //}
                     }
                     else if (givingItem.ItemPrefab != null)
                     {

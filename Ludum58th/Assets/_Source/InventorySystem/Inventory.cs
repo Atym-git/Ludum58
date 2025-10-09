@@ -17,6 +17,7 @@ public class Inventory
         _items.Add(item);
         int itemIndex = _items.Count - 1;
         _invoker.InvokeShowInv(item, itemIndex);
+        item.ShowItemNotifText(item._itemNotifText);
     }
 
     public void RemoveItem(Item item)
