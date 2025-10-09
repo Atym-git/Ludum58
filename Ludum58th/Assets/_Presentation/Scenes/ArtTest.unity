@@ -8598,6 +8598,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6612436823733082103, guid: 8f588e37e8ca58e48a6391b85f4f805c, type: 3}
+      propertyPath: _itemNotifText
+      value: Almost the same as I saw him on Olga on our first date.
+      objectReference: {fileID: 0}
+    - target: {fileID: 6612436823733082103, guid: 8f588e37e8ca58e48a6391b85f4f805c, type: 3}
       propertyPath: _coroutineRunner
       value: 
       objectReference: {fileID: 10629319}
