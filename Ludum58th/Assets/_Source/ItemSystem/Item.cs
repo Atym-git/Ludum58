@@ -4,6 +4,8 @@ using System.Collections;
 
 public class Item : MonoBehaviour
 {
+    private static float ITEM_MOVING_SPEED = 0.03f;
+
     [field: SerializeField]
     public Sprite ItemSprite { get; private set; }
 
@@ -12,7 +14,7 @@ public class Item : MonoBehaviour
     [field: SerializeField]
     public float NotificationDuration { get; private set; }
 
-    [SerializeField] private string _itemNotifText;
+    [SerializeField] public string _itemNotifText;
 
     private float _itemIconDisplayDuration;
 
@@ -21,7 +23,7 @@ public class Item : MonoBehaviour
 
     [SerializeField] private float _moveTowardsXAfterPress;
 
-    private GameObject _inventoryNotifPanel;
+    [SerializeField] private GameObject _inventoryNotifPanel;
 
     private TextMeshProUGUI _inventoryNotifTMP;
 
@@ -76,8 +78,9 @@ public class Item : MonoBehaviour
         if (_readyToMove && transform.position.x < _moveTowardsXAfterPress)
         {
             Vector3 moveTo = transform.position + transform.right;
-            transform.position = Vector3.MoveTowards(transform.position, moveTo, 0.03f);
+            transform.position = Vector3.MoveTowards(transform.position, moveTo, ITEM_MOVING_SPEED);
         }
+
     }
 
     public void OnClick()
@@ -89,20 +92,29 @@ public class Item : MonoBehaviour
         }
 
         _readyToMove = true;
-        _inventoryNotifTMP.text = item._itemNotifText;
-
-        _coroutineRunner.RunCoroutine(NotifyDuration(NotificationDuration, _inventoryNotifPanel));
+        ShowItemNotifText(item._itemNotifText);     
     }
 
-    public void SelfDestruct() => Destroy(gameObject);
+    public void ShowItemNotifText(string notificationText)
+    {
+        Debug.Log(_inventoryNotifTMP);
+        _inventoryNotifTMP.text = notificationText;
+        _coroutineRunner.RunCoroutine(NotifyDuration(NotificationDuration, _inventoryNotifPanel));
+    }
 
     public void DisableItem() => gameObject.SetActive(false);
 
     private IEnumerator NotifyDuration(float seconds, GameObject inventoryNotifGO)
     {
+        DraggableContainer.ItemsWhichDurDidntPass++;
         inventoryNotifGO.SetActive(true);
         yield return new WaitForSeconds(seconds);
-        inventoryNotifGO.SetActive(false);
+        DraggableContainer.ItemsWhichDurDidntPass--;
+
+        if (DraggableContainer.ItemsWhichDurDidntPass == 0)
+        {
+            inventoryNotifGO.SetActive(false);
+        }
     }
 
     public void CouldBeInventory() => _couldBeInInventory = true;

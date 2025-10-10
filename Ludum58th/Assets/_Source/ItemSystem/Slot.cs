@@ -40,8 +40,11 @@ public class Slot : MonoBehaviour/*, IDropHandler*/
     [field:SerializeField] public bool IsPartDone { get; private set; }
 
     [SerializeField] private TextMeshProUGUI itemsLeftTMP;
+    [SerializeField] private GameObject itemsLeftImage;
 
     private IsPhotoDone _isPhotoDone;
+
+    [SerializeField] private GameObject helpingSpriteGO;
 
     public void Construct(Inventory inventory, IsPhotoDone isPhotoDone)
     {
@@ -124,30 +127,21 @@ public class Slot : MonoBehaviour/*, IDropHandler*/
                     if (isPhotoChanger)
                     {
                         IsPartDone = true;
+
+                        if (helpingSpriteGO != null)
+                        {
+                            helpingSpriteGO.SetActive(false);
+                        }
+
                         GameObject itemPrefab = transform.GetChild(0).gameObject;
                         itemPrefab.SetActive(true);
 
                         if (_isPhotoDone.IsPartDone(slots))
                         {
+                            _isPhotoDone.CheckFullPhoto();
                             photoPanel.SetActive(true);
                             ChangePhotoPart(photoPartImage, photoPartDoneSprite);
                         }
-
-                        //if (AreAllPartsDone())
-                        //{
-
-                        //}
-                        //for (int i = 0; i < slots.Count; i++)
-                        //{
-                        //    _itemsDone += Convert.ToInt32(slots[i].IsPartDone);
-                        //    if (_itemsDone == slots.Count)
-                        //    {
-                        //        photoPanel.SetActive(true);
-                        //        ChangePhotoPart(photoPartImage, photoPartDoneSprite);
-                        //        GameObject itemPrefab = transform.GetChild(0).gameObject;
-                        //        itemPrefab.SetActive(true);
-                        //    }
-                        //}
                     }
                     else if (givingItem.ItemPrefab != null)
                     {
@@ -180,6 +174,7 @@ public class Slot : MonoBehaviour/*, IDropHandler*/
             int itemsLeft = requiredItems.Count - _currRequiredItemIndex;
             itemsLeftTMP.text = itemsLeft.ToString();
             itemsLeftTMP.gameObject.SetActive(itemsLeft != 0);
+            itemsLeftImage.gameObject.SetActive(itemsLeft != 0);
         }
     }
 

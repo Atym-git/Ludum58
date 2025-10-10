@@ -16,6 +16,7 @@ MonoBehaviour:
   <ItemPrefab>k__BackingField: {fileID: 361193814986622858, guid: e1c893ee33c32184a9bdcdf008969ef7, type: 3}
   <ItemNotificationText>k__BackingField: We bought it when Lenochka turned 3 years
     old. She chose this warm plaid bedspread herself.
-  <ItemNotificationDuration>k__BackingField: 5
+  <ItemNotificationDuration>k__BackingField: 90
   <ItemIconDisplayDuration>k__BackingField: 0
+  <MoveTowardsXAfterPress>k__BackingField: 0
   <CouldBeInInventory>k__BackingField: 0

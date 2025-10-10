@@ -16,7 +16,7 @@ MonoBehaviour:
   <ItemPrefab>k__BackingField: {fileID: 550997503694959817, guid: bf3d3a51e81d9744dbb2e050af9501e8, type: 3}
   <ItemNotificationText>k__BackingField: Life had battered her... But now she looks
     the same as the last time she was in Lenochka's arms.
-  <ItemNotificationDuration>k__BackingField: 5
+  <ItemNotificationDuration>k__BackingField: 90
   <ItemIconDisplayDuration>k__BackingField: 0
   <MoveTowardsXAfterPress>k__BackingField: 0
   <CouldBeInInventory>k__BackingField: 0

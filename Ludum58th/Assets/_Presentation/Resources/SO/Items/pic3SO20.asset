@@ -17,6 +17,7 @@ MonoBehaviour:
   <ItemNotificationText>k__BackingField: Olya called it the "Tree of Knowledge."
     I remember when she was still at the institute, she was fond of painting and
     sometimes wrote stories from books...
-  <ItemNotificationDuration>k__BackingField: 5
+  <ItemNotificationDuration>k__BackingField: 90
   <ItemIconDisplayDuration>k__BackingField: 0
+  <MoveTowardsXAfterPress>k__BackingField: 0
   <CouldBeInInventory>k__BackingField: 0

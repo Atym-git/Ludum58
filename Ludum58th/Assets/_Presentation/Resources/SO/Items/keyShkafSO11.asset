@@ -16,7 +16,7 @@ MonoBehaviour:
   <ItemPrefab>k__BackingField: {fileID: 8466496239400231826, guid: af55a4ed9a289ca4180e42f9d88c269f, type: 3}
   <ItemNotificationText>k__BackingField: It looks like a key to some furniture...
     Just from which one?
-  <ItemNotificationDuration>k__BackingField: 5
+  <ItemNotificationDuration>k__BackingField: 90
   <ItemIconDisplayDuration>k__BackingField: 0
   <MoveTowardsXAfterPress>k__BackingField: 0
   <CouldBeInInventory>k__BackingField: 1

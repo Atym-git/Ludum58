@@ -16,6 +16,7 @@ MonoBehaviour:
   <ItemPrefab>k__BackingField: {fileID: 1383869965532363964, guid: 712bed708dbb8644aa5e5d7896cbc694, type: 3}
   <ItemNotificationText>k__BackingField: I never noticed how huge this bed is...
     It makes you feel lonely... I'm definitely not going to sleep here alone.
-  <ItemNotificationDuration>k__BackingField: 5
+  <ItemNotificationDuration>k__BackingField: 90
   <ItemIconDisplayDuration>k__BackingField: 0
+  <MoveTowardsXAfterPress>k__BackingField: 0
   <CouldBeInInventory>k__BackingField: 0

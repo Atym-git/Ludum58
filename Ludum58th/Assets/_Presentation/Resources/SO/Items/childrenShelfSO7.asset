@@ -16,6 +16,7 @@ MonoBehaviour:
   <ItemPrefab>k__BackingField: {fileID: 4701326404929212564, guid: 10ee23cf594b0724a8bd76c27cc2276d, type: 3}
   <ItemNotificationText>k__BackingField: She always carefully placed her favorite
     figurines and her crafts on the shelves and was very proud of her "showcase"
-  <ItemNotificationDuration>k__BackingField: 5
+  <ItemNotificationDuration>k__BackingField: 90
   <ItemIconDisplayDuration>k__BackingField: 0
+  <MoveTowardsXAfterPress>k__BackingField: 0
   <CouldBeInInventory>k__BackingField: 0

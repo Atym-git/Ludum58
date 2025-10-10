@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Net;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -50,8 +51,9 @@ public class InventoryVisualizer
         }
         else
         {
-            Debug.Log($"Not Enough Place for items; " +
-                      $"_inventoryTransforms count = {_inventoryTransforms.Count}");
+            Transform newInventorySlot = Object.Instantiate(_inventoryTransforms[rootIndex - 1].parent, _inventoryTransformsParent.transform);
+            _inventoryTransforms.Add(newInventorySlot.GetChild(0));
+            ShowItems(item, rootIndex);
         }
     }
 

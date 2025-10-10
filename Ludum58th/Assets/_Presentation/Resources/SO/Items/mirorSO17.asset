@@ -16,6 +16,7 @@ MonoBehaviour:
   <ItemPrefab>k__BackingField: {fileID: 880568641295246794, guid: 957067c0e5279ff4fb5b5f3fd1717b4c, type: 3}
   <ItemNotificationText>k__BackingField: Is this how I look now..? Olya would tell
     me if she saw what I've turned myself into..
-  <ItemNotificationDuration>k__BackingField: 5
+  <ItemNotificationDuration>k__BackingField: 90
   <ItemIconDisplayDuration>k__BackingField: 0
+  <MoveTowardsXAfterPress>k__BackingField: 0
   <CouldBeInInventory>k__BackingField: 0

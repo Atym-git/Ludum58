@@ -16,6 +16,7 @@ MonoBehaviour:
   <ItemPrefab>k__BackingField: {fileID: 7071297219712895631, guid: 46015daacb171014696bc82dd8a50a53, type: 3}
   <ItemNotificationText>k__BackingField: There's no food in it right now, but all
     the magnets are in place... From all the places we visited as a family
-  <ItemNotificationDuration>k__BackingField: 5
+  <ItemNotificationDuration>k__BackingField: 90
   <ItemIconDisplayDuration>k__BackingField: 0
+  <MoveTowardsXAfterPress>k__BackingField: 0
   <CouldBeInInventory>k__BackingField: 0

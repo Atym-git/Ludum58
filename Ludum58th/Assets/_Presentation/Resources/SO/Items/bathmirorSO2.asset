@@ -16,6 +16,7 @@ MonoBehaviour:
   <ItemPrefab>k__BackingField: {fileID: 7177776267157218264, guid: 1f6ae9a7c64c7f943a551f442fa0089b, type: 3}
   <ItemNotificationText>k__BackingField: Where did the crack on this mirror come
     from?.. I don't remember her being here... Before my departure
-  <ItemNotificationDuration>k__BackingField: 5
+  <ItemNotificationDuration>k__BackingField: 90
   <ItemIconDisplayDuration>k__BackingField: 0
+  <MoveTowardsXAfterPress>k__BackingField: 0
   <CouldBeInInventory>k__BackingField: 0

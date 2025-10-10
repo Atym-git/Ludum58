@@ -16,7 +16,7 @@ MonoBehaviour:
   <ItemPrefab>k__BackingField: {fileID: 3272823191932016417, guid: e49b73d8209bd82478bfa0d585592229, type: 3}
   <ItemNotificationText>k__BackingField: What's under the carpet..? It's a drawing...
     which Lena gave me back in first grade... Our family...
-  <ItemNotificationDuration>k__BackingField: 5
+  <ItemNotificationDuration>k__BackingField: 90
   <ItemIconDisplayDuration>k__BackingField: 0
   <MoveTowardsXAfterPress>k__BackingField: 3.5
   <CouldBeInInventory>k__BackingField: 0

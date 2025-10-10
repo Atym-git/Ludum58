@@ -45,7 +45,9 @@ public class Invoker
         _playerMovement.Move(vertMoveF,
                              _playerData.PlayerSpeed,
                              _playerData.PlayerRb, 
-                             _playerData.CharacterTransform);
+                             _playerData.CharacterTransform,
+                             _playerData.PlayerAnimator,
+                             _playerData.AnimatorBoolParameterName);
     }
 
     public void InvokeCursorTrack()
