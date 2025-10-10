@@ -14,9 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   <ItemSprite>k__BackingField: {fileID: 21300000, guid: 2be30c138b531914d9ec07a4a69a925d, type: 3}
   <ItemPrefab>k__BackingField: {fileID: 4421437880142546502, guid: 58c2ac98476db6740a9c714cbcb500bd, type: 3}
-  <ItemNotificationText>k__BackingField: There was such an order here only before
-    the holidays.... We just need to put the toys carefully... What is this..? Isn't
-    it Lena's favorite hairpin? What is she doing here?
+  <ItemNotificationText>k__BackingField: "\u041E\u043B\u044F \u0432\u0441\u0435\u0433\u0434\u0430
+    \u043D\u043E\u0441\u0438\u043B\u0430 \u0441 \u0441\u043E\u0431\u043E\u0439 \u0442\u0430\u043A\u043E\u0439
+    \u043D\u0430\u0431\u043E\u0440\u0447\u0438\u043A.. \u041F\u0440\u0435\u0434\u0443\u0441\u043C\u043E\u0442\u0440\u0438\u0442\u0435\u043B\u044C\u043D\u043E,
+    \u0434\u0443\u043C\u0430\u044E \u043C\u043D\u0435 \u0441\u0442\u043E\u0438\u0442
+    \u043F\u0435\u0440\u0435\u043D\u044F\u0442\u044C \u044D\u0442\u0443 \u043F\u0440\u0438\u0432\u044B\u0447\u043A\u0443"
   <ItemNotificationDuration>k__BackingField: 90
   <ItemIconDisplayDuration>k__BackingField: 0
   <MoveTowardsXAfterPress>k__BackingField: 0

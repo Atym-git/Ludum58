@@ -14,8 +14,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   <ItemSprite>k__BackingField: {fileID: -7538016591321506521, guid: 2647848599db659438c54072d119db21, type: 3}
   <ItemPrefab>k__BackingField: {fileID: 3169791708134955521, guid: d6e6b88562c700247affe0af9c574f0a, type: 3}
-  <ItemNotificationText>k__BackingField: Vladimir Grigorievich Shukhov... A great
-    man. I once wanted to. so that my name remains on the pages of history as well.
+  <ItemNotificationText>k__BackingField: "\u0412\u043B\u0430\u0434\u0438\u043C\u0438\u0440
+    \u0413\u0440\u0438\u0433\u043E\u0440\u044C\u0435\u0432\u0438\u0447 \u0428\u0443\u0445\u043E\u0432...
+    \u0432\u0435\u043B\u0438\u043A\u0438\u0439 \u0447\u0435\u043B\u043E\u0432\u0435\u043A.
+    \u041A\u043E\u0433\u0434\u0430-\u0442\u043E \u044F \u0445\u043E\u0442\u0435\u043B.
+    \u0447\u0442\u043E\u0431\u044B \u043C\u043E\u0435 \u0438\u043C\u044F \u0442\u0430\u043A
+    \u0436\u0435 \u043E\u0441\u0442\u0430\u043B\u043E\u0441\u044C \u043D\u0430 \u0441\u0442\u0440\u0430\u043D\u0438\u0446\u0430\u0445
+    \u0438\u0441\u0442\u043E\u0440\u0438\u0438"
   <ItemNotificationDuration>k__BackingField: 90
   <ItemIconDisplayDuration>k__BackingField: 0
   <MoveTowardsXAfterPress>k__BackingField: 0

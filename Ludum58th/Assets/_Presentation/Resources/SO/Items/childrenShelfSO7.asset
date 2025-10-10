@@ -14,8 +14,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   <ItemSprite>k__BackingField: {fileID: 1411104284827739889, guid: 8ec3cfed57290c94d99a27d154479f59, type: 3}
   <ItemPrefab>k__BackingField: {fileID: 4701326404929212564, guid: 10ee23cf594b0724a8bd76c27cc2276d, type: 3}
-  <ItemNotificationText>k__BackingField: She always carefully placed her favorite
-    figurines and her crafts on the shelves and was very proud of her "showcase"
+  <ItemNotificationText>k__BackingField: "\u041E\u043D\u0430 \u0432\u0441\u0435\u0433\u0434\u0430
+    \u043E\u0447\u0435\u043D\u044C \u0442\u0449\u0430\u0442\u0435\u043B\u044C\u043D\u043E
+    \u0440\u0430\u0441\u0441\u0442\u0430\u0432\u043B\u044F\u043B\u0430 \u043B\u044E\u0431\u0438\u043C\u044B\u0435
+    \u0444\u0438\u0433\u0443\u0440\u043A\u0438 \u0438 \u0441\u0432\u043E\u0438 \u043F\u043E\u0434\u0435\u043B\u043A\u0438
+    \u043D\u0430 \u043F\u043E\u043B\u043A\u0430\u0445 \u0438 \u043E\u0447\u0435\u043D\u044C
+    \u0433\u043E\u0440\u0434\u0438\u043B\u0430\u0441\u044C \u0441\u0432\u043E\u0435\u0439
+    \"\u0432\u0438\u0442\u0440\u0438\u043D\u043E\u0439\""
   <ItemNotificationDuration>k__BackingField: 90
   <ItemIconDisplayDuration>k__BackingField: 0
   <MoveTowardsXAfterPress>k__BackingField: 0

@@ -14,8 +14,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   <ItemSprite>k__BackingField: {fileID: 10915, guid: 0000000000000000f000000000000000, type: 0}
   <ItemPrefab>k__BackingField: {fileID: 3434118841531235656, guid: dbaf728c7067338439a9079ad758a0c9, type: 3}
-  <ItemNotificationText>k__BackingField: My boots and sneakers.. only mine... Did
-    Svetlana Borisovna take the rest when she came in?
+  <ItemNotificationText>k__BackingField: "\u041C\u043E\u0438 \u0441\u0430\u043F\u043E\u0433\u0438
+    \u0438 \u0442\u0430\u043F\u043A\u0438.. \u0442\u043E\u043B\u044C\u043A\u043E
+    \u043C\u043E\u0438... \u041E\u0441\u0442\u0430\u043B\u044C\u043D\u043E\u0435
+    \u0437\u0430\u0431\u0440\u0430\u043B\u0430 \u0421\u0432\u0435\u0442\u043B\u0430\u043D\u0430
+    \u0411\u043E\u0440\u0438\u0441\u043E\u0432\u043D\u0430, \u043A\u043E\u0433\u0434\u0430
+    \u0437\u0430\u0445\u043E\u0434\u0438\u043B\u0430?"
   <ItemNotificationDuration>k__BackingField: 90
   <ItemIconDisplayDuration>k__BackingField: 0
   <MoveTowardsXAfterPress>k__BackingField: 0

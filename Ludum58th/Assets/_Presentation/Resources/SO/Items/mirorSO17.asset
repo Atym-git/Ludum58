@@ -14,8 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   <ItemSprite>k__BackingField: {fileID: -4233866548200529636, guid: 8b6d8c2e1f932664ca2aa75ed2847026, type: 3}
   <ItemPrefab>k__BackingField: {fileID: 880568641295246794, guid: 957067c0e5279ff4fb5b5f3fd1717b4c, type: 3}
-  <ItemNotificationText>k__BackingField: Is this how I look now..? Olya would tell
-    me if she saw what I've turned myself into..
+  <ItemNotificationText>k__BackingField: "\u042D\u0442\u043E \u0442\u0430\u043A \u044F
+    \u0441\u0435\u0439\u0447\u0430\u0441 \u0432\u044B\u0433\u043B\u044F\u0436\u0443..?
+    \u041E\u043B\u044F \u0431\u044B \u0432\u044B\u0441\u043A\u0430\u0437\u0430\u043B\u0430
+    \u043C\u043D\u0435, \u0435\u0441\u043B\u0438 \u0431\u044B \u0443\u0432\u0438\u0434\u0435\u043B\u0430
+    \u0432\u043E \u0447\u0442\u043E \u044F \u0441\u0435\u0431\u044F \u043F\u0440\u0435\u0432\u0440\u0430\u0442\u0438\u043B.."
   <ItemNotificationDuration>k__BackingField: 90
   <ItemIconDisplayDuration>k__BackingField: 0
   <MoveTowardsXAfterPress>k__BackingField: 0

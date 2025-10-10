@@ -14,8 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   <ItemSprite>k__BackingField: {fileID: 21300000, guid: 38ace652b3d3f454c8d330a7dc4b476d, type: 3}
   <ItemPrefab>k__BackingField: {fileID: 5085585849761172855, guid: f0c25067cb202ac4cad0447583ca872f, type: 3}
-  <ItemNotificationText>k__BackingField: It's a good powder. He even washed Lenin's
-    baby diapers.
+  <ItemNotificationText>k__BackingField: "\u0425\u043E\u0440\u043E\u0448\u0438\u0439
+    \u043F\u043E\u0440\u043E\u0448\u043E\u043A. \u041E\u0442\u0441\u0442\u0438\u0440\u044B\u0432\u0430\u043B
+    \u0434\u0430\u0436\u0435 \u041B\u0435\u043D\u0438\u043D\u044B \u0434\u0435\u0442\u0441\u043A\u0438\u0435
+    \u043F\u0435\u043B\u0435\u043D\u043A\u0438"
   <ItemNotificationDuration>k__BackingField: 90
   <ItemIconDisplayDuration>k__BackingField: 0
   <MoveTowardsXAfterPress>k__BackingField: 0
