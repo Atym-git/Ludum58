@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 379fd36feb28baa468046de9e6191256, type: 3}
+  m_Name: teapodSO33
+  m_EditorClassIdentifier: 
+  <ItemSprite>k__BackingField: {fileID: 21300000, guid: 1cb09700cebd9b348bfa47e2e5352ab2, type: 3}
+  <ItemPrefab>k__BackingField: {fileID: 6727660687028321734, guid: c4782c95645db934088dbda7b9764c86, type: 3}
+  <ItemNotificationText>k__BackingField: Teapot... Olya snatched it from a sale..?
+    She loved him very much and always put him in the center of the table.. We have
+    never drunk tea from it... After all, it was always "for a special occasion"
+  <ItemNotificationDuration>k__BackingField: 90
+  <ItemIconDisplayDuration>k__BackingField: 0
+  <MoveTowardsXAfterPress>k__BackingField: 0
+  <CouldBeInInventory>k__BackingField: 1

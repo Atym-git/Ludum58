@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 379fd36feb28baa468046de9e6191256, type: 3}
+  m_Name: kresloSO13
+  m_EditorClassIdentifier: 
+  <ItemSprite>k__BackingField: {fileID: 6105894699606738013, guid: 47ffa88512511ed4bb4f58eb59f5f6d9, type: 3}
+  <ItemPrefab>k__BackingField: {fileID: 6538399494171437772, guid: 8e2258fa8ae8f4b4486baf3881f761d8, type: 3}
+  <ItemNotificationText>k__BackingField: When Lena was very young, she sat on my
+    lap in this chair. In the evenings, we read her favorite fairy tales and drank
+    tea with honey.
+  <ItemNotificationDuration>k__BackingField: 90
+  <ItemIconDisplayDuration>k__BackingField: 0
+  <MoveTowardsXAfterPress>k__BackingField: 0
+  <CouldBeInInventory>k__BackingField: 0

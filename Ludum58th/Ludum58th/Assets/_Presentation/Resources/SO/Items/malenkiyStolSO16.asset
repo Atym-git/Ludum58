@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 379fd36feb28baa468046de9e6191256, type: 3}
+  m_Name: malenkiyStolSO16
+  m_EditorClassIdentifier: 
+  <ItemSprite>k__BackingField: {fileID: -1948113687104694533, guid: aabb59f7c68afc145856793e0737d95b, type: 3}
+  <ItemPrefab>k__BackingField: {fileID: 1848877050416615714, guid: e7cc37ef4f683d345bb8f0f4b61f08d3, type: 3}
+  <ItemNotificationText>k__BackingField: 'We often sat in the kitchen together.:
+    Olya cooked, and Lena painted... There were even pencil marks on the table.'
+  <ItemNotificationDuration>k__BackingField: 90
+  <ItemIconDisplayDuration>k__BackingField: 0
+  <MoveTowardsXAfterPress>k__BackingField: 0
+  <CouldBeInInventory>k__BackingField: 0
